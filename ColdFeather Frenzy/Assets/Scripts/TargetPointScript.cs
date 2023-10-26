@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class TargetPointScript : MonoBehaviour
 {
-    [SerializeField]
-    private float speed = 2f;
-    [SerializeField]
-    private float distance = 2f;
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private float distance = 2f;
 
     private Vector3 startPosition;
     // Start is called before the first frame update

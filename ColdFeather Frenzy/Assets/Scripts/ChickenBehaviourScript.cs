@@ -5,8 +5,19 @@ using UnityEngine;
 public class ChickenBehaviourScript : MonoBehaviour
 {
     private GameObject target;
-    [SerializeField]
-    private float speed = 5f;
+
+    private bool isWalking = false;
+    private bool hasBeenOnScreen = false;
+
+    private Vector2 screenBounds;
+
+    [SerializeField] private float speed = 5f;
+
+    [Header("Time parameters")]
+    [SerializeField] private float maxWalkTime = 2f;
+    [SerializeField] private float minWalkTime = 1f;
+    [SerializeField] private float maxStopTime = 1f;
+    [SerializeField] private float minStopTime = 0.5f;  
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +26,45 @@ public class ChickenBehaviourScript : MonoBehaviour
         target = GameObject.FindWithTag("TargetPoint");
 
         // rotate chicken in direction of the target
+        RotateToTarget();
+
+        // check if time parameters are correctly applied
+        if (minWalkTime > maxWalkTime)
+            minWalkTime = maxWalkTime;
+        if (minStopTime > maxStopTime)
+            minStopTime = maxStopTime;
+
+        // get screen bounds from main camera
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+
+        StartCoroutine(WalkAndStop());
+    }
+
+    // Coroutine to let the chicken walk and stop between random parameters
+    IEnumerator WalkAndStop()
+    {
+        while (true)
+        {
+            isWalking = !isWalking;
+
+            float time;
+            if (isWalking)
+            {
+                // rotate chicken in direction of the target
+                RotateToTarget();
+                time = Random.Range(minWalkTime, maxWalkTime);
+            }
+            else
+            {
+                time = Random.Range(minStopTime, maxStopTime);
+            }
+
+            yield return new WaitForSeconds(time);
+        }
+    }
+
+    void RotateToTarget()
+    {
         Vector2 targetDirection = target.transform.position - transform.position;
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -23,8 +73,24 @@ public class ChickenBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // move chicken
-        transform.position += speed * Time.deltaTime * transform.right;
+        if (isWalking)
+        {
+            // move chicken
+            transform.position += speed * Time.deltaTime * transform.right;
+
+            // check if chicken is on screen
+            if (!hasBeenOnScreen && Mathf.Abs(transform.position.x) <= screenBounds.x && Mathf.Abs(transform.position.y) <= screenBounds.y)
+            {
+                hasBeenOnScreen = true;
+            }
+
+            // check if chicken has reached the screen bounds and has been on screen before
+            if (hasBeenOnScreen && (Mathf.Abs(transform.position.x) > screenBounds.x || Mathf.Abs(transform.position.y) > screenBounds.y))
+            {
+                isWalking = false; // Stop the chicken
+            }
+        }
+            
     }
 
     // destroys itself if it gets out of bounce (just in case)

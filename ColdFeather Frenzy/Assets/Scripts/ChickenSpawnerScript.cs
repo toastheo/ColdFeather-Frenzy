@@ -9,11 +9,9 @@ public class ChickenSpawnerScript : MonoBehaviour
     private Transform[] spawners;
     private float time;
 
-    [SerializeField]
-    private GameLogicScript gameLogicScript;
+    [SerializeField] private GameLogicScript gameLogicScript;
 
-    [SerializeField]
-    private GameObject[] chickens;
+    [SerializeField] private GameObject[] chickens;
 
     // Start is called before the first frame update
     void Start()
