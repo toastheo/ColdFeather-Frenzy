@@ -12,6 +12,7 @@ public class ChickenBehaviourScript : MonoBehaviour
     private Vector2 screenBounds;
 
     [SerializeField] private float speed = 5f;
+    [SerializeField] private LayerMask stopLayer;
 
     [Header("Time parameters")]
     [SerializeField] private float maxWalkTime = 2f;
@@ -91,6 +92,15 @@ public class ChickenBehaviourScript : MonoBehaviour
             }
         }
             
+    }
+
+    // if it chicken the stop layer
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (((1 << collision.gameObject.layer) & stopLayer) != 0)
+        {
+            isWalking = false;
+        }
     }
 
     // destroys itself if it gets out of bounce (just in case)
