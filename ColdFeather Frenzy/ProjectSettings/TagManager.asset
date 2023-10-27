@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Objects
+    uniqueID: 1087618273
+    locked: 0
+  - name: Animals
+    uniqueID: 657086103
+    locked: 0

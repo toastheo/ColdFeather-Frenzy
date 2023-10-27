@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class ChickenBehaviourScript : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class ChickenBehaviourScript : MonoBehaviour
     private bool hasBeenOnScreen = false;
 
     private Vector2 screenBounds;
+
+    private GameLogicScript gameLogicScript;
+
+    public bool wasCaught = false;
 
     [SerializeField] private float speed = 5f;
     [SerializeField] private LayerMask stopLayer;
@@ -23,6 +28,9 @@ public class ChickenBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // find game logic script
+        gameLogicScript = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogicScript>();
+
         // find target
         target = GameObject.FindWithTag("TargetPoint");
 
@@ -51,8 +59,12 @@ public class ChickenBehaviourScript : MonoBehaviour
             float time;
             if (isWalking)
             {
-                // rotate chicken in direction of the target
-                RotateToTarget();
+                // rotate chicken in direction of the target or in a random direction if it was caught
+                if (!wasCaught)
+                    RotateToTarget();
+                else
+                    RotateRandomly();
+
                 time = Random.Range(minWalkTime, maxWalkTime);
             }
             else
@@ -71,6 +83,12 @@ public class ChickenBehaviourScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
+    void RotateRandomly()
+    {
+        float randomAngle = Random.Range(0f, 360f);
+        transform.rotation = Quaternion.Euler(0, 0, randomAngle);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -79,28 +97,45 @@ public class ChickenBehaviourScript : MonoBehaviour
             // move chicken
             transform.position += speed * Time.deltaTime * transform.right;
 
-            // check if chicken is on screen
-            if (!hasBeenOnScreen && Mathf.Abs(transform.position.x) <= screenBounds.x && Mathf.Abs(transform.position.y) <= screenBounds.y)
+            if (wasCaught)
             {
-                hasBeenOnScreen = true;
-            }
+                // check if chicken is facing outside of the stop layer
+                RaycastHit2D hit = Physics2D.Raycast(transform.position + (transform.right * 1.5f), transform.right, speed * Time.deltaTime, stopLayer);
+                if (hit.collider == null)
+                {
+                    isWalking = false;
+                }
+            } 
+            else
+            {
+                // check if chicken is on screen
+                if (!hasBeenOnScreen && Mathf.Abs(transform.position.x) <= screenBounds.x && Mathf.Abs(transform.position.y) <= screenBounds.y)
+                {
+                    hasBeenOnScreen = true;
+                }
 
-            // check if chicken has reached the screen bounds and has been on screen before
-            if (hasBeenOnScreen && (Mathf.Abs(transform.position.x) > screenBounds.x || Mathf.Abs(transform.position.y) > screenBounds.y))
-            {
-                isWalking = false; // Stop the chicken
+                // check if chicken has reached the screen bounds and has been on screen before
+                if (hasBeenOnScreen && (Mathf.Abs(transform.position.x) > screenBounds.x || Mathf.Abs(transform.position.y) > screenBounds.y))
+                {
+                    isWalking = false; // Stop the chicken
+                }
             }
         }
-            
     }
 
-    // if it chicken the stop layer
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (((1 << collision.gameObject.layer) & stopLayer) != 0)
         {
             isWalking = false;
         }
+    }
+
+    // game over
+    public void GameOver()
+    {
+        Destroy(gameObject);
+        gameLogicScript.gameOver = true;
     }
 
     // destroys itself if it gets out of bounce (just in case)
