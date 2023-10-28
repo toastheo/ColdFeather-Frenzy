@@ -154,10 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390857a34e5274856a49deb3a78586dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxX: 8
-  minX: -8
-  maxY: 4
-  minY: -4
+  maxBound: {x: 8, y: 4}
+  minBound: {x: -8, y: -4}
 --- !u!61 &28213194
 BoxCollider2D:
   m_ObjectHideFlags: 0
