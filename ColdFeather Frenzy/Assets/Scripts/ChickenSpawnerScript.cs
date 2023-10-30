@@ -8,6 +8,7 @@ public class ChickenSpawnerScript : MonoBehaviour
 {
     private Transform[] spawners;
     private float time;
+    private List<GameObject> existingChickens = new();
 
     [SerializeField] private GameLogicScript gameLogicScript;
 
@@ -51,6 +52,14 @@ public class ChickenSpawnerScript : MonoBehaviour
 
     private void SpawnChicken()
     {
+        // increase sorting order for existing chickens
+        foreach (GameObject chicken in existingChickens)
+        {
+            SpriteRenderer sr = chicken.GetComponent<SpriteRenderer>();
+            if (sr != null)
+                sr.sortingOrder++;
+        }
+
         // get a random chicken
         int chickenIndex = UnityEngine.Random.Range(0, chickens.Length);
         
@@ -58,6 +67,14 @@ public class ChickenSpawnerScript : MonoBehaviour
         Transform spawnLocation = spawners[UnityEngine.Random.Range(0, spawners.Length)];
 
         // spawn chicken
-        Instantiate(chickens[chickenIndex], spawnLocation.position, Quaternion.identity);
+        GameObject newChicken = Instantiate(chickens[chickenIndex], spawnLocation.position, Quaternion.identity);
+
+        // set sorting order to the lowest value
+        SpriteRenderer newSr = newChicken.GetComponent<SpriteRenderer>();
+        if (newSr != null)
+            newSr.sortingOrder = 0;
+
+        // add chicken to the list of existing chickens
+        existingChickens.Add(newChicken);
     }
 }

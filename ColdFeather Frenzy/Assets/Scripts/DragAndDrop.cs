@@ -14,10 +14,16 @@ public class DragAndDrop : MonoBehaviour
     [SerializeField] private Vector2 maxBound = new(8, 4);
     [SerializeField] private Vector2 minBound = new(-8, -4);
 
+    private ChickenBehaviourScript chickenBehaviourScript;
+
     // Start is called before the first frame update
     void Start()
     {
+        // get Collider
         mouseOverObject = GetComponent<Collider2D>();
+
+        // get Chicken Behaviour Script
+        chickenBehaviourScript = GetComponent<ChickenBehaviourScript>();
     }
 
     // Update is called once per frame
@@ -49,10 +55,20 @@ public class DragAndDrop : MonoBehaviour
             transform.position = clampPos;
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && dragging)
         {
             canMove = false;
             dragging = false;
+
+            // check if chicken was caught
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, 0f, chickenBehaviourScript.StopLayer);
+            if (hit.collider != null)
+            {
+                chickenBehaviourScript.wasCaught = true;
+
+                // disable script
+                enabled = false;
+            }
         }
     }
 }

@@ -9,9 +9,6 @@ public class GameLogicScript : MonoBehaviour
 
     // private variables
     [SerializeField] private float spawningInterval = 4f;
-    public float SpawningInterval
-    {
-        get { return spawningInterval; }
-    }
-    
+    public float SpawningInterval => spawningInterval;
+
 }

@@ -18,6 +18,7 @@ public class ChickenBehaviourScript : MonoBehaviour
 
     [SerializeField] private float speed = 5f;
     [SerializeField] private LayerMask stopLayer;
+    public LayerMask StopLayer => stopLayer;
 
     [Header("Time parameters")]
     [SerializeField] private float maxWalkTime = 2f;
