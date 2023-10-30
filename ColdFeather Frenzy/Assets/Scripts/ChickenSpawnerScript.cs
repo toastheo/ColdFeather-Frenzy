@@ -55,8 +55,7 @@ public class ChickenSpawnerScript : MonoBehaviour
         // increase sorting order for existing chickens
         foreach (GameObject chicken in existingChickens)
         {
-            SpriteRenderer sr = chicken.GetComponent<SpriteRenderer>();
-            if (sr != null)
+            if (chicken.TryGetComponent<SpriteRenderer>(out var sr))
                 sr.sortingOrder++;
         }
 
@@ -70,8 +69,7 @@ public class ChickenSpawnerScript : MonoBehaviour
         GameObject newChicken = Instantiate(chickens[chickenIndex], spawnLocation.position, Quaternion.identity);
 
         // set sorting order to the lowest value
-        SpriteRenderer newSr = newChicken.GetComponent<SpriteRenderer>();
-        if (newSr != null)
+        if (newChicken.TryGetComponent<SpriteRenderer>(out var newSr))
             newSr.sortingOrder = 0;
 
         // add chicken to the list of existing chickens
