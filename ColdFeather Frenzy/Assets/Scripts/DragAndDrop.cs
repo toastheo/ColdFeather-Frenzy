@@ -7,7 +7,7 @@ public class DragAndDrop : MonoBehaviour
     private bool canMove = false;
     private bool dragging = false;
 
-    // for checking if mouse if over game object
+    // for checking if mouse is over game object
     Collider2D mouseOverObject;
 
     // define frame
