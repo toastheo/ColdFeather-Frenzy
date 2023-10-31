@@ -133,7 +133,7 @@ public class ChickenBehaviourScript : MonoBehaviour
     }
 
     // game over
-    public void GameOver()
+    private void GameOver()
     {
         Destroy(gameObject);
         gameLogicScript.gameOver = true;
