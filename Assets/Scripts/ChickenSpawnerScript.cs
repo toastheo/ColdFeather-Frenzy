@@ -58,7 +58,6 @@ public class ChickenSpawnerScript : MonoBehaviour
             return;
         }
         
-        
         // increase sorting order for existing chickens
         foreach (GameObject chicken in existingChickens)
         {

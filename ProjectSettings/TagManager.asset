@@ -3,12 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Decoration
+  - GameLogic
+  - RedStable
+  - BlueStable
+  - TargetPoint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - StopLayer
   - Water
   - UI
   - 
@@ -40,4 +45,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Stable
+    uniqueID: 477959447
+    locked: 0
+  - name: Chicken Behind
+    uniqueID: 951365001
+    locked: 0
+  - name: Decorations
+    uniqueID: 206677987
+    locked: 0
+  - name: Chicken Before
+    uniqueID: 525367899
+    locked: 0
+  - name: Snow
+    uniqueID: 449007379
     locked: 0
