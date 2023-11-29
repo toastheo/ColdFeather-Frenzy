@@ -12,7 +12,7 @@ namespace WorldTime
     public class WorldLight : MonoBehaviour
     {
     
-        private Light2D light;
+        private new Light2D light;
 
         [SerializeField] private WorldTime worldTime;
         [SerializeField] private Gradient gradient;

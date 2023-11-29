@@ -22,7 +22,7 @@ public class GameLogicScript : MonoBehaviour
 
         // PLACEHOLDER
         Debug.Log($"Game Over: {customMessage}");
-        // EditorApplication.isPlaying = false;
+        EditorApplication.isPlaying = false;
     }
 
 }
