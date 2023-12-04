@@ -2,8 +2,6 @@ using System;
 using TMPro;
 using UnityEngine;
 
-// https://www.youtube.com/watch?v=0nq1ZFxuEJY
-
 namespace WorldTime
 {
     [RequireComponent(typeof(TMP_Text))]

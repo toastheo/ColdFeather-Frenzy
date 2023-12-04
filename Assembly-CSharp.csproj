@@ -59,6 +59,7 @@
      <Compile Include="Assets/Scripts/WorldTime/WorldTimeConstant.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets/Scripts/MainMenu.cs" />
      <Compile Include="Assets/Scripts/TargetPointScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
@@ -101,6 +102,7 @@
      <Folder Include="Assets/Scripts/WorldTime" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
      <Folder Include="Assets/Settings" />
+     <Folder Include="Assets/Farm Assets/ui/Export" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/Farm Assets/ui" />
      <Folder Include="Assets/Farm Assets/Buildings/gifs" />
@@ -117,7 +119,6 @@
      <Folder Include="Assets/Farm Assets/Snowflakes/64X64" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources" />
-     <Folder Include="Assets/UI Assets/Original Artwork" />
      <None Include="Assets/Farm Assets/info.txt" />
      <Folder Include="Assets/Farm Assets/Snowflakes/512X512" />
      <Folder Include="Assets/Farm Assets/enemies/slime purple" />
@@ -135,10 +136,8 @@
      <Folder Include="Assets/Farm Assets/Buildings/gifs/NPC4" />
      <Folder Include="Assets/Farm Assets/Buildings/gifs/NPC3" />
      <Folder Include="Assets/Tiles/Ground_Tiles" />
-     <Folder Include="Assets/UI Assets" />
      <Folder Include="Assets/Farm Assets/enemies/slime orange" />
      <Folder Include="Assets/Farm Assets/enemies/bat/bat purple gifs" />
-     <Folder Include="Assets/UI Assets/Sprite" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
