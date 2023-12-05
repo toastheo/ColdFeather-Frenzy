@@ -9,6 +9,7 @@ TagManager:
   - RedStable
   - BlueStable
   - TargetPoint
+  - Lamps
   layers:
   - Default
   - TransparentFX

@@ -74,6 +74,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
      <Compile Include="Assets/Scripts/FlipScript.cs" />
      <Compile Include="Assets/Scripts/ChickenBehaviourScript.cs" />
+     <Compile Include="Assets/Scripts/Lamps/Lamps.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
@@ -143,6 +144,7 @@
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Materials" />
      <Folder Include="Assets/Scripts" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+     <Folder Include="Assets/Scripts/Lamps" />
      <Folder Include="Assets/Farm Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets/Farm Assets/enemies/bat/bat red gifs" />
