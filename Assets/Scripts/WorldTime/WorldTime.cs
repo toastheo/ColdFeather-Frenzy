@@ -11,7 +11,9 @@ namespace WorldTime
         
         [SerializeField] private float dayLenght; // in seconds
         
-        private TimeSpan currentTime;
+        public static TimeSpan currentTime; /// <summary>
+                                     /// Need to be public for Lamps
+                                     /// </summary>
         private float inGameMinuteLenght => dayLenght / WorldTimeConstant.MinutesInDay;
     
         private void Start()

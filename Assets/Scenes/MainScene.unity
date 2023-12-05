@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0043500066, y: 0.0092999935, z: 0}
-    m_Extent: {x: 0.68815, y: 0.6682, z: 0}
+    m_Center: {x: 0.006099999, y: 0.008599997, z: 0}
+    m_Extent: {x: 0.6927, y: 0.671, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3571,8 +3571,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.012699991, y: 0.010650009, z: 0}
-    m_Extent: {x: 0.68700004, y: 0.67184997, z: 0}
+    m_Center: {x: 0.011449993, y: 0.017450005, z: 0}
+    m_Extent: {x: 0.69025, y: 0.66725004, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4672,7 +4672,7 @@ Transform:
   m_GameObject: {fileID: 1328028163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.049999952, y: -5.15, z: 0}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4906,6 +4906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433902342}
   - component: {fileID: 1433902343}
+  - component: {fileID: 1433902344}
   m_Layer: 0
   m_Name: tiles_266
   m_TagString: Lamps
@@ -4922,7 +4923,7 @@ Transform:
   m_GameObject: {fileID: 1433902341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.75, y: -5.15, z: 0}
+  m_LocalPosition: {x: -2.75, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4980,6 +4981,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1433902344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433902341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96dca8af904214b50893e474e18610b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1433902343}
+  daySprite: {fileID: 932026155, guid: 04da47bda2063e748a4c50b1976be178, type: 3}
+  nightSprite: {fileID: 359320410, guid: 04da47bda2063e748a4c50b1976be178, type: 3}
 --- !u!1 &1444027189
 GameObject:
   m_ObjectHideFlags: 0
