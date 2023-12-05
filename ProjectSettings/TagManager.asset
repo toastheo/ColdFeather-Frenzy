@@ -53,6 +53,9 @@ TagManager:
   - name: StableDecorations
     uniqueID: 979210569
     locked: 0
+  - name: StableDecortionsEgg
+    uniqueID: 2762617407
+    locked: 0
   - name: Chicken Behind
     uniqueID: 951365001
     locked: 0
