@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003099978, y: 0.011400014, z: 0}
-    m_Extent: {x: 0.6897, y: 0.67260003, z: 0}
+    m_Center: {x: 0.003399998, y: 0.0067500174, z: 0}
+    m_Extent: {x: 0.6902, y: 0.66935, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3571,8 +3571,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.006549984, y: 0.016149998, z: 0}
-    m_Extent: {x: 0.68305004, y: 0.66875, z: 0}
+    m_Center: {x: 0.005549997, y: 0.01640001, z: 0}
+    m_Extent: {x: 0.69585, y: 0.6682, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3685,22 +3685,22 @@ MonoBehaviour:
   worldTime: {fileID: 662125792}
   gradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 0.68235296, g: 0.8392157, b: 0.94509804, a: 1}
-    key2: {r: 0.98039216, g: 0.84313726, b: 0.627451, a: 0}
-    key3: {r: 0.92156863, g: 0.59607846, b: 0.30588236, a: 0}
-    key4: {r: 0.105882354, g: 0.14901961, b: 0.19215687, a: 0}
-    key5: {r: 0.15294118, g: 0.21568628, b: 0.27450982, a: 0}
-    key6: {r: 0.8235294, g: 0.7058824, b: 0.87058824, a: 0}
-    key7: {r: 0.8352941, g: 0.85882354, b: 0.85882354, a: 0}
-    ctime0: 6554
-    ctime1: 13107
-    ctime2: 19661
-    ctime3: 26214
-    ctime4: 42598
-    ctime5: 49151
-    ctime6: 58982
-    ctime7: 65535
+    key0: {r: 0.15294118, g: 0.2509804, b: 0.54509807, a: 1}
+    key1: {r: 0.41568628, g: 0.3529412, b: 0.8039216, a: 1}
+    key2: {r: 0.5294118, g: 0.80784315, b: 0.92156863, a: 0}
+    key3: {r: 0.6784314, g: 0.84705883, b: 0.9019608, a: 0}
+    key4: {r: 1, g: 1, b: 1, a: 0}
+    key5: {r: 0.6901961, g: 0.76862746, b: 0.87058824, a: 0}
+    key6: {r: 0.11764706, g: 0.5647059, b: 1, a: 0}
+    key7: {r: 0.15294118, g: 0.2509804, b: 0.54509807, a: 0}
+    ctime0: 0
+    ctime1: 8192
+    ctime2: 16384
+    ctime3: 24576
+    ctime4: 32768
+    ctime5: 40959
+    ctime6: 49151
+    ctime7: 57343
     atime0: 0
     atime1: 65535
     atime2: 0
@@ -3742,7 +3742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c2cc94e6f824b5ca5265e6b1df9b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayLenght: 15
+  dayLenght: 60
 --- !u!4 &662125793
 Transform:
   m_ObjectHideFlags: 0

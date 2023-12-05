@@ -16,6 +16,7 @@ namespace WorldTime
     
         private void Start()
         {
+            currentTime = TimeSpan.FromHours(12); // Start first Day at 12:00
             StartCoroutine(AddMinute());
         }
     
@@ -25,6 +26,8 @@ namespace WorldTime
             WorldTimeChanged?.Invoke(this, currentTime);
             yield return new WaitForSeconds(inGameMinuteLenght);
             StartCoroutine(AddMinute());
+            print(currentTime);
+
         }
     
     }
