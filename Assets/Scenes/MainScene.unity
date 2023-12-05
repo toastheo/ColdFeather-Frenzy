@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0071499944, y: 0.013399988, z: 0}
-    m_Extent: {x: 0.68685, y: 0.6661, z: 0}
+    m_Center: {x: 0.010399997, y: 0.017749995, z: 0}
+    m_Extent: {x: 0.6908, y: 0.66805005, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3334,7 +3334,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.5400634
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3867,8 +3867,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.010349989, y: 0.008749992, z: 0}
-    m_Extent: {x: 0.69355, y: 0.66655004, z: 0}
+    m_Center: {x: 0.00819999, y: 0.013200015, z: 0}
+    m_Extent: {x: 0.6872, y: 0.66429996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
