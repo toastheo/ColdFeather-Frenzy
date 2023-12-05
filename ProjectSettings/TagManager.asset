@@ -61,6 +61,9 @@ TagManager:
   - name: Chicken Before
     uniqueID: 525367899
     locked: 0
+  - name: Lamps
+    uniqueID: 443496645
+    locked: 0
   - name: Snow
     uniqueID: 449007379
     locked: 0
