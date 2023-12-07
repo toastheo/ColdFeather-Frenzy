@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/Lamps/LampSpriteChange.cs" />
-     <Compile Include="Assets/Scripts/ChickenSortingSystem.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
@@ -65,7 +64,6 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
-     <Compile Include="Assets/Scripts/ChickenSpawnerScript.cs" />
      <Compile Include="Assets/Scripts/Lamps/DayNightConstant.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
@@ -75,7 +73,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
      <Compile Include="Assets/Scripts/FlipScript.cs" />
-     <Compile Include="Assets/Scripts/ChickenBehaviourScript.cs" />
+     <Compile Include="Assets/Scripts/Chicken/ChickenSpawnerScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
@@ -86,14 +84,17 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets/Scripts/GameLogicScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
+     <Compile Include="Assets/Scripts/Chicken/ChickenSortingSystem.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
      <Compile Include="Assets/Scripts/WorldTime/WorldTime.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
+     <Compile Include="Assets/Scripts/Chicken/ChickenBehaviourScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
      <Compile Include="Assets/Scripts/DragAndDrop.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
+     <Compile Include="Assets/Scripts/Chicken/DamagFlash.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Prefabs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -140,6 +141,7 @@
      <Folder Include="Assets/Tiles/Ground_Tiles" />
      <Folder Include="Assets/Farm Assets/enemies/slime orange" />
      <Folder Include="Assets/Farm Assets/enemies/bat/bat purple gifs" />
+     <Folder Include="Assets/Scenes/MainScene" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
@@ -190,9 +192,9 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Textures" />
-     <Folder Include="Assets/Scenes/MainScene" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
      <Folder Include="Assets/Farm Assets/Buildings/gifs/player house" />
+     <Folder Include="Assets/Scripts/Chicken" />
      <None Include="Assets/Textfiles/Bugs&amp;co.txt" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />

@@ -24,8 +24,13 @@ public class ChickenBehaviourScript : MonoBehaviour
     private float timer = 0;
     private Animator animator;
     private DragAndDrop dragAndDropScript;
-
+    private DamagFlash damagFlash;
+    
     public bool wasCaught = false;
+    private float lifetime;
+    private float closeToDying;
+    private float flashAmount;
+    private float firstDieAni;
 
     [SerializeField] private ChickenColor color = ChickenColor.Red;
     [SerializeField] private float speed = 5f;
@@ -37,7 +42,8 @@ public class ChickenBehaviourScript : MonoBehaviour
     [SerializeField] private float minWalkTime = 1f;
     [SerializeField] private float maxStopTime = 1f;
     [SerializeField] private float minStopTime = 0.5f;
-    [SerializeField] private float lifetime; 
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +74,19 @@ public class ChickenBehaviourScript : MonoBehaviour
 
         // get drag and drop script
         dragAndDropScript = GetComponent<DragAndDrop>();
-
+        
+        // get damage flash script
+        damagFlash = GetComponent<DamagFlash>();
+        
+        // get then close to dying starts
+        closeToDying = gameLogicScript.closeToDying;
+        
+        // set how many times the closeToDying is showing
+        flashAmount  = gameLogicScript.flashAmount;
+        firstDieAni = lifetime * closeToDying;
+        
+        
+        
         StartCoroutine(WalkAndStop());
     }
 
@@ -172,12 +190,23 @@ public class ChickenBehaviourScript : MonoBehaviour
     {
         // update timer
         timer += Time.deltaTime;
-
+        
         // check if chicken is dead
         if (timer > lifetime)
         {
             gameLogicScript.GameOver("Time expired.");
         }
+        
+        
+        // check if chicken is close to dying
+        // execute damage flash
+        if (timer <= firstDieAni)
+        {
+            damagFlash.CallDamageFlash();
+            //float leftOvertimeFrame = 1f - closeToDying;
+        }
+        
+
     }
     
     private bool CheckForOverlap(string tagToCheck)

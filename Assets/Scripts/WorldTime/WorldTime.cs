@@ -28,7 +28,7 @@ namespace WorldTime
             WorldTimeChanged?.Invoke(this, currentTime);
             yield return new WaitForSeconds(inGameMinuteLenght);
             StartCoroutine(AddMinute());
-            print(currentTime);
+            //print(currentTime);
 
         }
     

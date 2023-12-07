@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 8508504232843959708}
   - component: {fileID: 1286113990422902622}
   - component: {fileID: -8506198916882708178}
+  - component: {fileID: 8820548014306010384}
   m_Layer: 0
   m_Name: Red Chicken
   m_TagString: Untagged
@@ -194,7 +195,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 44df2b4827d094c33ad6c6abec284715, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -248,7 +249,6 @@ MonoBehaviour:
   minWalkTime: 1
   maxStopTime: 1
   minStopTime: 0.5
-  lifetime: 10
 --- !u!58 &7117168492739797889
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -375,3 +375,17 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &8820548014306010384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015267989623696887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8252e6c865b44a28bcbbb66c9fe988b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 0, g: 1, b: 0.28943753, a: 1}
+  flashTime: 0.25
