@@ -6,8 +6,10 @@ using UnityEngine;
 public class DamageFlash : MonoBehaviour
 {
 
+    [ColorUsage(true, true)]
     [SerializeField] private Color flashColor = Color.green;
     [SerializeField] private float flashTime = 0.5f;
+    [SerializeField] private AnimationCurve flashSpeedCurve;
 
     // this is more important if the sprite has legs, arms, etc.
     private SpriteRenderer[] spriteRenders;
@@ -53,7 +55,7 @@ public class DamageFlash : MonoBehaviour
             elapsedTime += Time.deltaTime;
             
             /// lerp the flash amount
-            currentFlashAmount = Mathf.Lerp(1f, 0f, (elapsedTime / flashTime));
+            currentFlashAmount = Mathf.Lerp(1f, flashSpeedCurve.Evaluate(elapsedTime), (elapsedTime / flashTime));
             SetFlashAmount(currentFlashAmount);
 
             yield return null;
