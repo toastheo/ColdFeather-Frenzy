@@ -74,6 +74,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
      <Compile Include="Assets/Scripts/FlipScript.cs" />
      <Compile Include="Assets/Scripts/Chicken/ChickenSpawnerScript.cs" />
+     <Compile Include="Assets/Scripts/Chicken/DamageFlash.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
@@ -94,7 +95,6 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
      <Compile Include="Assets/Scripts/DragAndDrop.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
-     <Compile Include="Assets/Scripts/Chicken/DamagFlash.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Prefabs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

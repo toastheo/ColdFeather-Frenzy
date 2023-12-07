@@ -24,13 +24,13 @@ public class ChickenBehaviourScript : MonoBehaviour
     private float timer = 0;
     private Animator animator;
     private DragAndDrop dragAndDropScript;
-    private DamagFlash damagFlash;
+    private DamageFlash _damageFlash;
     
     public bool wasCaught = false;
     private float lifetime;
     private float closeToDying;
     private float flashAmount;
-    private float firstDieAni;
+    private int lastFlashInterval = -1; // to trigger the first flash
 
     [SerializeField] private ChickenColor color = ChickenColor.Red;
     [SerializeField] private float speed = 5f;
@@ -76,15 +76,13 @@ public class ChickenBehaviourScript : MonoBehaviour
         dragAndDropScript = GetComponent<DragAndDrop>();
         
         // get damage flash script
-        damagFlash = GetComponent<DamagFlash>();
+        _damageFlash = GetComponent<DamageFlash>();
         
         // get then close to dying starts
         closeToDying = gameLogicScript.closeToDying;
         
         // set how many times the closeToDying is showing
         flashAmount  = gameLogicScript.flashAmount;
-        firstDieAni = lifetime * closeToDying;
-        
         
         
         StartCoroutine(WalkAndStop());
@@ -190,24 +188,41 @@ public class ChickenBehaviourScript : MonoBehaviour
     {
         // update timer
         timer += Time.deltaTime;
-        
+    
         // check if chicken is dead
         if (timer > lifetime)
         {
             gameLogicScript.GameOver("Time expired.");
         }
-        
-        
-        // check if chicken is close to dying
-        // execute damage flash
-        if (timer <= firstDieAni)
-        {
-            damagFlash.CallDamageFlash();
-            //float leftOvertimeFrame = 1f - closeToDying;
-        }
-        
 
+        // calculate percentage of the lifetime then shader is triggering
+        // 10 seconds * 0,75 = at 7,5 first dying animation starts
+        float triggerStartTime = lifetime * closeToDying;
+        if (timer >= triggerStartTime )
+        {
+            // Calculate the total duration for flashing
+            // 10 seconds - 7,5 seconds = 2,5 seconds
+            float flashDuration = lifetime - triggerStartTime;
+
+            // Calculate the duration of each flash interval
+            // 2,5 seconds / 3 = 0,83333
+            float intervalDuration = flashDuration / flashAmount;
+
+            // Find out which interval the current time is in
+            // 7,5-7,5/0,833 -> int cast = 0
+            // 8,333-7,5/0,833 -> int cast = 1
+            int currentInterval = (int)((timer - triggerStartTime) / intervalDuration);
+
+            // Trigger damage flash only once per interval
+            // first iteration -1 after that 1, 2, 3, .... -> check if chicken is dead close game before
+            if (currentInterval != lastFlashInterval)
+            {
+                _damageFlash.CallDamageFlash();
+                lastFlashInterval = currentInterval;
+            }        
+        }
     }
+
     
     private bool CheckForOverlap(string tagToCheck)
     {

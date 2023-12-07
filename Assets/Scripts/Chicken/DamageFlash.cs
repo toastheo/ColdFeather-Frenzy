@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamagFlash : MonoBehaviour
+public class DamageFlash : MonoBehaviour
 {
 
-    [SerializeField] private Color flashColor = Color.red;
-    [SerializeField] private float flashTime = 0.25f;
+    [SerializeField] private Color flashColor = Color.green;
+    [SerializeField] private float flashTime = 0.5f;
 
     // this is more important if the sprite has legs, arms, etc.
     private SpriteRenderer[] spriteRenders;
