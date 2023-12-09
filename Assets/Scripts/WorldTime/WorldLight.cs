@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-// https://www.youtube.com/watch?v=0nq1ZFxuEJY
-
 namespace WorldTime
 {
     [RequireComponent(typeof(Light2D))]

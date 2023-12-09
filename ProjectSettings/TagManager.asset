@@ -9,6 +9,7 @@ TagManager:
   - RedStable
   - BlueStable
   - TargetPoint
+  - Lamps
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,12 @@ TagManager:
   - name: Stable
     uniqueID: 477959447
     locked: 0
+  - name: StableDecorations
+    uniqueID: 979210569
+    locked: 0
+  - name: StableDecortionsEgg
+    uniqueID: 2762617407
+    locked: 0
   - name: Chicken Behind
     uniqueID: 951365001
     locked: 0
@@ -57,6 +64,9 @@ TagManager:
     locked: 0
   - name: Chicken Before
     uniqueID: 525367899
+    locked: 0
+  - name: Lamps
+    uniqueID: 443496645
     locked: 0
   - name: Snow
     uniqueID: 449007379
