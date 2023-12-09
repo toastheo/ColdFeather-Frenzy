@@ -45,7 +45,7 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.12f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/ChickenSortingSystem.cs" />
+     <Compile Include="Assets/Scripts/Lamps/LampSpriteChange.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
@@ -59,13 +59,13 @@
      <Compile Include="Assets/Scripts/WorldTime/WorldTimeConstant.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets/Scripts/MainMenu.cs" />
      <Compile Include="Assets/Scripts/TargetPointScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
-     <Compile Include="Assets/Scripts/ChickenSpawnerScript.cs" />
+     <Compile Include="Assets/Scripts/Lamps/DayNightConstant.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
-     <Compile Include="Assets/Scripts/WorldTime/WorldTimeDisplay.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
@@ -73,20 +73,24 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
      <Compile Include="Assets/Scripts/FlipScript.cs" />
-     <Compile Include="Assets/Scripts/ChickenBehaviourScript.cs" />
+     <Compile Include="Assets/Scripts/Chicken/ChickenSpawnerScript.cs" />
+     <Compile Include="Assets/Scripts/Chicken/DamageFlash.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
+     <Compile Include="Assets/Scripts/Lamps/LightOnOff.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets/Scripts/GameLogicScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
+     <Compile Include="Assets/Scripts/Chicken/ChickenSortingSystem.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
      <Compile Include="Assets/Scripts/WorldTime/WorldTime.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
+     <Compile Include="Assets/Scripts/Chicken/ChickenBehaviourScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
      <Compile Include="Assets/Scripts/DragAndDrop.cs" />
@@ -101,6 +105,7 @@
      <Folder Include="Assets/Scripts/WorldTime" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
      <Folder Include="Assets/Settings" />
+     <Folder Include="Assets/Farm Assets/ui/Export" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/Farm Assets/ui" />
      <Folder Include="Assets/Farm Assets/Buildings/gifs" />
@@ -117,7 +122,6 @@
      <Folder Include="Assets/Farm Assets/Snowflakes/64X64" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources" />
-     <Folder Include="Assets/UI Assets/Original Artwork" />
      <None Include="Assets/Farm Assets/info.txt" />
      <Folder Include="Assets/Farm Assets/Snowflakes/512X512" />
      <Folder Include="Assets/Farm Assets/enemies/slime purple" />
@@ -135,16 +139,17 @@
      <Folder Include="Assets/Farm Assets/Buildings/gifs/NPC4" />
      <Folder Include="Assets/Farm Assets/Buildings/gifs/NPC3" />
      <Folder Include="Assets/Tiles/Ground_Tiles" />
-     <Folder Include="Assets/UI Assets" />
      <Folder Include="Assets/Farm Assets/enemies/slime orange" />
      <Folder Include="Assets/Farm Assets/enemies/bat/bat purple gifs" />
-     <Folder Include="Assets/UI Assets/Sprite" />
+     <Folder Include="Assets/Scenes/MainScene" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Materials" />
      <Folder Include="Assets/Scripts" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+     <Folder Include="Assets/Shader" />
+     <Folder Include="Assets/Scripts/Lamps" />
      <Folder Include="Assets/Farm Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets/Farm Assets/enemies/bat/bat red gifs" />
@@ -189,6 +194,7 @@
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Textures" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
      <Folder Include="Assets/Farm Assets/Buildings/gifs/player house" />
+     <Folder Include="Assets/Scripts/Chicken" />
      <None Include="Assets/Textfiles/Bugs&amp;co.txt" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
@@ -453,10 +459,10 @@
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.12f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Collections.LowLevel.ILSupport">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.12f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
@@ -825,169 +831,169 @@
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.12f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Path.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Common.Path.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Common.Path.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Aseprite.Common">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Aseprite.Common.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Aseprite.Common.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Collections">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Runtime">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
      </Reference>
      <Reference Include="PPv2URPConverters">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Aseprite.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Aseprite.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Aseprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
      <Reference Include="PsdPlugin">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.005">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.005.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.005.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Runtime">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Editor">
-     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/Beleg_Final/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+     <HintPath>/Users/kurt/Desktop/Uni (MI)/5. Semester/I343 Beleuchtung und Rendering/ColdFeather-Frenzy/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
