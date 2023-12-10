@@ -1,0 +1,8 @@
+TODO:
+
+Bug: When the chickens are placed behind the coop, 
+they run through the coop to get back near the center.
+
+Wrong Color: The color of the red chickens does not exactly match the color of the red coop. 
+The coop has the more suitable red color. 
+Possibly color the sprites again.
