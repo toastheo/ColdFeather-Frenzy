@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 5706461617022220716}
   - component: {fileID: 4588961067023410738}
   - component: {fileID: 2319347607124659593}
-  - component: {fileID: 8820489173489956837}
   m_Layer: 0
   m_Name: ChickenSprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1874136289
-  m_SortingLayer: 0
+  m_SortingLayerID: 206677987
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -693032680, guid: 4380f37d3fb3dfa47a8d5db0a8029372, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -122,20 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chickenBehaviourScript: {fileID: 6457939104059558366}
   flipChild: 0
---- !u!114 &8820489173489956837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2683337659541108972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63c857af7348c7b4cb4bddeadc84df0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgroundLayerName: Chicken Behind
-  foregroundLayerName: Chicken Before
 --- !u!1 &4015267989623696887
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,8 +198,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 951365001
-  m_SortingLayer: 4
+  m_SortingLayerID: 206677987
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
