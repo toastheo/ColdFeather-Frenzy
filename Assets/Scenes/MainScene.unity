@@ -265,8 +265,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00909999, y: 0.009900004, z: 0}
-    m_Extent: {x: 0.6941, y: 0.67200005, z: 0}
+    m_Center: {x: 0.007649988, y: 0.008399993, z: 0}
+    m_Extent: {x: 0.69515, y: 0.66840005, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4782,8 +4782,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.01244998, y: 0.009149998, z: 0}
-    m_Extent: {x: 0.69005, y: 0.67165005, z: 0}
+    m_Center: {x: 0.0031999946, y: 0.0135499835, z: 0}
+    m_Extent: {x: 0.6825, y: 0.67095, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10298,6 +10298,7 @@ GameObject:
   - component: {fileID: 901970081}
   - component: {fileID: 901970080}
   - component: {fileID: 901970082}
+  - component: {fileID: 901970083}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: GameLogic
@@ -10351,6 +10352,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 350711393}
+--- !u!114 &901970083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901970079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628e6441faa1d8844b8abc743eab63d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
 --- !u!1 &1004341447
 GameObject:
   m_ObjectHideFlags: 0
@@ -23247,6 +23261,6 @@ SceneRoots:
   - {fileID: 662125793}
   - {fileID: 1902222698}
   - {fileID: 1704985332}
-  - {fileID: 262593619}
   - {fileID: 350711397}
+  - {fileID: 262593619}
   - {fileID: 620529286}

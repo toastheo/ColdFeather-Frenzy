@@ -4,6 +4,8 @@ using UnityEngine.Serialization;
 
 public class GameLogicScript : MonoBehaviour
 {
+    public static bool isGameOver;
+
     // private variables
     [SerializeField] private float spawningInterval = 4f;
     public float SpawningInterval => spawningInterval;
@@ -18,7 +20,8 @@ public class GameLogicScript : MonoBehaviour
     [SerializeField] public float closeToDying;
     [SerializeField] public float flashAmount;
 
-    
+
+
     // transfer number of Flashes
     public float FlashAmount
     {
@@ -32,7 +35,7 @@ public class GameLogicScript : MonoBehaviour
 
         // PLACEHOLDER
         Debug.Log($"Game Over: {customMessage}");
-        EditorApplication.isPlaying = false;
+        isGameOver = true;
     }
 
 }
