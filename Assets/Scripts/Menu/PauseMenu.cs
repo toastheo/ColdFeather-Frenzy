@@ -7,6 +7,8 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject ingameScore;
+    public GameObject PausePanel;
+    public GameObject OptionsPanel;
     public static bool isPaused;
     private AudioSource chickenAmbiente;
 
@@ -36,6 +38,8 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         ingameScore.SetActive(false);
+        PausePanel.SetActive(true);
+        OptionsPanel.SetActive(false);
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -46,6 +50,8 @@ public class PauseMenu : MonoBehaviour
     {
         ingameScore.SetActive(true);
         pauseMenu.SetActive(false);
+        PausePanel.SetActive(false);
+        OptionsPanel.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
         chickenAmbiente.UnPause();

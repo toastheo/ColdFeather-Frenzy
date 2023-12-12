@@ -284,8 +284,6 @@ GameObject:
   - component: {fileID: 497217807}
   - component: {fileID: 497217806}
   - component: {fileID: 497217809}
-  - component: {fileID: 497217810}
-  - component: {fileID: 497217811}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -411,30 +409,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &497217810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497217805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dd133366eba4064180b2e8c96264308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &497217811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497217805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bcae59617796fd499f1852062ebb67a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &621949823
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +567,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 497217810}
+      - m_Target: {fileID: 910997142}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -652,6 +626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 857224169}
+  - component: {fileID: 857224170}
   m_Layer: 5
   m_Name: Options Panel
   m_TagString: Untagged
@@ -682,6 +657,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &857224170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857224168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bcae59617796fd499f1852062ebb67a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &905437958
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,8 +760,9 @@ GameObject:
   - component: {fileID: 910997140}
   - component: {fileID: 910997139}
   - component: {fileID: 910997138}
+  - component: {fileID: 910997142}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MainMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -867,6 +855,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &910997142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910997137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd133366eba4064180b2e8c96264308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &937275731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,7 +1608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 497217810}
+      - m_Target: {fileID: 910997142}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: PlayGame
         m_Mode: 1
@@ -2221,7 +2221,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 497217811}
+      - m_Target: {fileID: 857224170}
         m_TargetAssemblyTypeName: Fullscreen, Assembly-CSharp
         m_MethodName: change
         m_Mode: 1
