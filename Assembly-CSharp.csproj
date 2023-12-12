@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\Chicken\TargetPointScript.cs" />
     <Compile Include="Assets\Scripts\Chicken\ChickenSpawnerScript.cs" />
     <Compile Include="Assets\Scripts\Chicken\DamageFlash.cs" />
+    <Compile Include="Assets\Scripts\Sounds\ChickenAmbienteScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />

@@ -10,6 +10,7 @@ TagManager:
   - BlueStable
   - TargetPoint
   - Lamps
+  - ChickenAmbiente
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,10 @@ public class DragAndDrop : MonoBehaviour
     private ChickenBehaviourScript chickenBehaviourScript;
     private GameLogicScript gameLogicScript;
 
+    // for chicken noices
+    private AudioSource audioSource;
+    [SerializeField] private float noisesFadeOutTime = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +33,23 @@ public class DragAndDrop : MonoBehaviour
 
         // get Game Logic Script
         gameLogicScript = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogicScript>();
+
+        // get audiosource
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private IEnumerator FadeOutCoroutine(float fadeOutTime)
+    {
+        float startVolume = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / fadeOutTime;
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = startVolume;   // not necessary but just in case
     }
 
     // Update is called once per frame
@@ -48,6 +69,7 @@ public class DragAndDrop : MonoBehaviour
                 if (canMove)
                 {
                     dragging = true;
+                    audioSource.Play();
                 }
             }
 
@@ -66,6 +88,7 @@ public class DragAndDrop : MonoBehaviour
             {
                 canMove = false;
                 dragging = false;
+                StartCoroutine(FadeOutCoroutine(noisesFadeOutTime));
 
                 // check if chicken was caught
                 RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, 0f, chickenBehaviourScript.StopLayer);
