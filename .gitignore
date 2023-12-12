@@ -65,3 +65,4 @@ Desktop.ini
 .gradle/
 ColdFeather-Frenzy.sln
 Assembly-CSharp.csproj
+*.csproj

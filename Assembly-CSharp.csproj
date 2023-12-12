@@ -52,13 +52,14 @@
      <Compile Include="Assets/Scripts/Menu/MainMenu.cs" />
      <Compile Include="Assets/Scripts/Chicken/ChickenNewSortingSystem.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
+     <Compile Include="Assets/Scripts/Menu/HighscoreManager.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
      <Compile Include="Assets/Scripts/WorldTime/WorldLight.cs" />
-     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
      <Compile Include="Assets/Scripts/Menu/Fullscreen.cs" />
+     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
      <Compile Include="Assets/Scripts/Chicken/FlipScript.cs" />
      <Compile Include="Assets/Scripts/WorldTime/WorldTimeConstant.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
@@ -66,10 +67,11 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
-     <Compile Include="Assets/Scripts/Lamps/DayNightConstant.cs" />
      <Compile Include="Assets/Scripts/Menu/PauseMenu.cs" />
+     <Compile Include="Assets/Scripts/Lamps/DayNightConstant.cs" />
      <Compile Include="Assets/Scripts/Chicken/DragAndDrop.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
+     <Compile Include="Assets/Scripts/Menu/GameOverMenu.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
@@ -80,6 +82,7 @@
      <Compile Include="Assets/Scripts/Chicken/ChickenSpawnerScript.cs" />
      <Compile Include="Assets/Scripts/Chicken/DamageFlash.cs" />
      <Compile Include="Assets/Scripts/Sounds/ChickenAmbienteScript.cs" />
+     <Compile Include="Assets/Scripts/Menu/ScoreManager.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
