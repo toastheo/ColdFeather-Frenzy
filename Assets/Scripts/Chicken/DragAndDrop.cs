@@ -73,6 +73,10 @@ public class DragAndDrop : MonoBehaviour
                 {
                     chickenBehaviourScript.wasCaught = true;
 
+                    if (chickenBehaviourScript.ChickenStableMatch())
+                    {
+                        GameLogicScript.score += 1;
+                    }
                     // check if chicken matches the stable
                     if (!chickenBehaviourScript.ChickenStableMatch())
                         gameLogicScript.GameOver("Chicken was dragged into the wrong stable.");

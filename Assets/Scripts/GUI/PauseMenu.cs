@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject ingameScore;
     public static bool isPaused;
 
 
@@ -33,6 +34,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        ingameScore.SetActive(false);
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -40,6 +42,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ContinueGame()
     {
+        ingameScore.SetActive(true);
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;

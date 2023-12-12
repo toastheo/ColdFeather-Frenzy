@@ -5,6 +5,7 @@ using UnityEngine.Serialization;
 public class GameLogicScript : MonoBehaviour
 {
     public static bool isGameOver;
+    public static int score;
 
     // private variables
     [SerializeField] private float spawningInterval = 4f;
@@ -12,9 +13,6 @@ public class GameLogicScript : MonoBehaviour
 
     [SerializeField] private int level = 0;
     public float Level => level;
-
-    [SerializeField] private int score = 0;
-    public int Score => score;
 
     [SerializeField] public float lifeTimeChicken;
     [SerializeField] public float closeToDying;

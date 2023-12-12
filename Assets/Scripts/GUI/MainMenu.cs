@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
      public void PlayGame()
      {
+        GameLogicScript.score = 0;
         Time.timeScale = 1f;
         GameLogicScript.isGameOver = false;
         SceneManager.LoadSceneAsync(1);

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour
 {
     public GameObject gameoverMenu;
+    public GameObject ingameScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class GameOverMenu : MonoBehaviour
 
     public void GameOverDisplay()
     {
+        ingameScore.SetActive(false);
         gameoverMenu.SetActive(true);
         Time.timeScale = 0f;
     }
