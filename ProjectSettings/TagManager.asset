@@ -11,6 +11,8 @@ TagManager:
   - TargetPoint
   - Lamps
   - ChickenAmbiente
+  - Music
+  - Sound
   layers:
   - Default
   - TransparentFX

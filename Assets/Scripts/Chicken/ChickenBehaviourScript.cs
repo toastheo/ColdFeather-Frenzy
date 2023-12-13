@@ -5,6 +5,7 @@ using System.Runtime.ExceptionServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class ChickenBehaviourScript : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class ChickenBehaviourScript : MonoBehaviour
     private Animator animator;
     private DragAndDrop dragAndDropScript;
     private DamageFlash _damageFlash;
-    
+
     public bool wasCaught = false;
     private float lifetime;
     private float closeToDying;
@@ -43,7 +44,9 @@ public class ChickenBehaviourScript : MonoBehaviour
     [SerializeField] private float maxStopTime = 1f;
     [SerializeField] private float minStopTime = 0.5f;
 
-
+    private AudioSource flapSound;
+    private AudioSource blopSound;
+    private SoundControl soundControl;
 
     // Start is called before the first frame update
     void Start()
@@ -84,7 +87,17 @@ public class ChickenBehaviourScript : MonoBehaviour
         // set how many times the closeToDying is showing
         flashAmount  = gameLogicScript.flashAmount;
         
-        
+        // get soundcontrol
+        soundControl = GameObject.FindGameObjectWithTag("SoundController").GetComponent<SoundControl>();
+
+        // get audioSources
+        flapSound = GetComponent<AudioSource>();
+        blopSound = transform.GetChild(1).GetComponent<AudioSource>();
+
+        // set volume
+        flapSound.volume = soundControl.FlapsoundVolume;
+        blopSound.volume = soundControl.BlopSoundVolume;
+
         StartCoroutine(WalkAndStop());
     }
 
