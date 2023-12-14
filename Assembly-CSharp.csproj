@@ -86,7 +86,7 @@
     <Compile Include="Assets\Scripts\Lamps\DayNightConstant.cs" />
     <Compile Include="Assets\Scripts\Chicken\DragAndDrop.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Menu\SoundControl.cs" />
+    <Compile Include="Assets\Scripts\Menu\SoundSettings.cs" />
     <Compile Include="Assets\Scripts\Menu\GameOverMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -110,6 +110,7 @@
     <Compile Include="Assets\Scripts\GameLogicScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\Chicken\ChickenSortingSystem.cs" />
+    <Compile Include="Assets\Scripts\Sounds\SoundControl.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\WorldTime\WorldTime.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />

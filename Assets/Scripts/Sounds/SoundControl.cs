@@ -29,6 +29,20 @@ public class SoundControl : MonoBehaviour
         get { return blopSoundVolume; }
     }
 
+    private float musicSliderValue;
+    public float MusicSliderValue
+    {
+        get { return musicSliderValue; }
+        set { musicSliderValue = value; musicSlider.value = value; }
+    }
+
+    private float soundSliderValue;
+    public float SoundSliderValue
+    {
+        get { return soundSliderValue; }
+        set { soundSliderValue = value; soundSlider.value = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,14 +69,43 @@ public class SoundControl : MonoBehaviour
         }
 
         // init position of the sliders and sounds
-        musicSlider.value = musicSources[0].volume / maxMusicVolume[0];
-        soundSlider.value = soundSources[0].volume / maxSoundVolume[0];
+        LoadAudioSettings();
+        UpdateAudio();
 
         flapsoundVolume = soundSlider.maxValue * maxFlapSoundVolume;
         blopSoundVolume = soundSlider.maxValue * maxBlopSoundVolume;
     }
 
-    public void OnVolumeChange()
+    private void SaveAudioSettings()
+    {
+        PlayerPrefs.SetFloat("MusicSliderValue", musicSlider.value);
+        PlayerPrefs.SetFloat("SoundSliderValue", soundSlider.value);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadAudioSettings()
+    {
+        musicSlider.onValueChanged.RemoveAllListeners();
+        soundSlider.onValueChanged.RemoveAllListeners();
+
+        MusicSliderValue = PlayerPrefs.GetFloat("MusicSliderValue", 1.0f);
+        SoundSliderValue = PlayerPrefs.GetFloat("SoundSliderValue", 1.0f);
+
+        musicSlider.onValueChanged.AddListener(OnVolumeChanged);
+        soundSlider.onValueChanged.AddListener(OnVolumeChanged);
+    }
+
+    public void OnVolumeChanged(float arg0)
+    {
+        musicSliderValue = musicSlider.value;
+        soundSliderValue = soundSlider.value;
+
+        UpdateAudio();
+
+        SaveAudioSettings();
+    }
+
+    private void UpdateAudio()
     {
         // change music and sound
         for (int i = 0; i < musicSources.Length; i++)
