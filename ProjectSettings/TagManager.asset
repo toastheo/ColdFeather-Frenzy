@@ -13,6 +13,8 @@ TagManager:
   - ChickenAmbiente
   - Music
   - Sound
+  - Chicken
+  - SoundController
   layers:
   - Default
   - TransparentFX

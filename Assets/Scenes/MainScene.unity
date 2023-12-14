@@ -265,8 +265,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0009499788, y: 0.007499993, z: 0}
-    m_Extent: {x: 0.68825, y: 0.6666, z: 0}
+    m_Center: {x: 0.008900017, y: 0.011350006, z: 0}
+    m_Extent: {x: 0.69089997, y: 0.67145, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5233,8 +5233,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005099982, y: 0.010700017, z: 0}
-    m_Extent: {x: 0.68840003, y: 0.67359996, z: 0}
+    m_Center: {x: 0.0048999786, y: 0.012950003, z: 0}
+    m_Extent: {x: 0.6918, y: 0.67165, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17770,7 +17770,7 @@ GameObject:
   - component: {fileID: 1474171099}
   m_Layer: 0
   m_Name: SoundController
-  m_TagString: Untagged
+  m_TagString: SoundController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17804,6 +17804,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSlider: {fileID: 1890203220}
   soundSlider: {fileID: 1695067749}
+  maxFlapSoundVolume: 0.5
+  maxBlopSoundVolume: 0.2
 --- !u!1 &1515330640
 GameObject:
   m_ObjectHideFlags: 0
