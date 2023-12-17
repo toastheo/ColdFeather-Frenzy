@@ -10,13 +10,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject PausePanel;
     public GameObject OptionsPanel;
     public static bool isPaused;
-    private AudioSource chickenAmbiente;
 
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu.SetActive(false);
-        chickenAmbiente = GameObject.FindGameObjectWithTag("ChickenAmbiente").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,7 +41,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        chickenAmbiente.Pause();
     }
 
     public void ContinueGame()
@@ -54,7 +51,6 @@ public class PauseMenu : MonoBehaviour
         OptionsPanel.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
-        chickenAmbiente.UnPause();
     }
 
     public void GoToMainMenu()

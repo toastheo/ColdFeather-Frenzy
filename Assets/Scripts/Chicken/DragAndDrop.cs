@@ -20,6 +20,7 @@ public class DragAndDrop : MonoBehaviour
 
     // for chicken noices
     private AudioSource audioSource;
+    private AudioSource blopSound;
     [SerializeField] private float noisesFadeOutTime = 2f;
 
     // Start is called before the first frame update
@@ -36,6 +37,9 @@ public class DragAndDrop : MonoBehaviour
 
         // get audiosource
         audioSource = GetComponent<AudioSource>();
+
+        // get blopSound
+        blopSound = transform.GetChild(1).GetComponent<AudioSource>();
     }
 
     private IEnumerator FadeOutCoroutine(float fadeOutTime)
@@ -94,6 +98,7 @@ public class DragAndDrop : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, 0f, chickenBehaviourScript.StopLayer);
                 if (hit.collider != null)
                 {
+                    blopSound.Play();
                     chickenBehaviourScript.wasCaught = true;
 
                     if (chickenBehaviourScript.ChickenStableMatch())
