@@ -1,0 +1,12 @@
+[
+  {"level": 1, "spawningInterval": 3.0, "lifeTimeChicken": 10.0},
+  {"level": 2, "spawningInterval": 1.5, "lifeTimeChicken": 10.0},
+  {"level": 3, "spawningInterval": 2.5, "lifeTimeChicken": 9.0},
+  {"level": 4, "spawningInterval": 1.5, "lifeTimeChicken": 9.0},
+  {"level": 5, "spawningInterval": 2.0, "lifeTimeChicken": 8.0},
+  {"level": 6, "spawningInterval": 1.5, "lifeTimeChicken": 7.0},
+  {"level": 7, "spawningInterval": 1.25, "lifeTimeChicken": 7.0},
+  {"level": 8, "spawningInterval": 1.25, "lifeTimeChicken": 6.5},
+  {"level": 9, "spawningInterval": 1.0, "lifeTimeChicken": 6.0},
+  {"level": 10, "spawningInterval": 0.75, "lifeTimeChicken": 5.0}
+]

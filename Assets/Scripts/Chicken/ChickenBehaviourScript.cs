@@ -174,7 +174,7 @@ public class ChickenBehaviourScript : MonoBehaviour
             }
         }
 
-        if (!wasCaught)
+        if (!wasCaught && !dragAndDropScript.Dragging)
         {
             UpdateTimer();
         }
