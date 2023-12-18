@@ -1,3 +1,5 @@
+using System;
+using Level;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -37,4 +39,16 @@ public class GameLogicScript : MonoBehaviour
         isGameOver = true;
     }
 
+    private void Update()
+    {
+        // update Level and spawning interval
+        if (LevelDataManager.Instance != null)
+        {
+            spawningInterval = LevelDataManager.Instance.spawningInterval;
+            level = LevelDataManager.Instance.level;
+            lifeTimeChicken = LevelDataManager.Instance.lifeTimeChicken;
+            
+            print("Level: " + level + " spawningInterval: " + spawningInterval + "lifeTime: " + lifeTimeChicken);
+        }
+    }
 }
