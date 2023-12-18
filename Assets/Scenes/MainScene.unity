@@ -265,8 +265,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003700018, y: 0.015749991, z: 0}
-    m_Extent: {x: 0.6951, y: 0.66995, z: 0}
+    m_Center: {x: -0.00090000033, y: 0.009200007, z: 0}
+    m_Extent: {x: 0.6905, y: 0.66929996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5233,8 +5233,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.001549989, y: 0.013200015, z: 0}
-    m_Extent: {x: 0.69305, y: 0.6704, z: 0}
+    m_Center: {x: 0.005850017, y: 0.011099994, z: 0}
+    m_Extent: {x: 0.68965, y: 0.6723, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10828,8 +10828,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  spawningInterval: 0
-  lifeTimeChicken: 0
+  spawningInterval: 3
+  lifeTimeChicken: 10
   levels: []
 --- !u!1 &970687856
 GameObject:
