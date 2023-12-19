@@ -7,10 +7,15 @@ public class GameOverMenu : MonoBehaviour
 {
     public GameObject gameoverMenu;
     public GameObject ingameScore;
+
+    private HighscoreManager highscoreManager;
+
     // Start is called before the first frame update
     void Start()
     {
         gameoverMenu.SetActive(false);
+        // get HighscoreManager reference
+        highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager").GetComponent<HighscoreManager>();
     }
 
     // Update is called once per frame
@@ -24,6 +29,9 @@ public class GameOverMenu : MonoBehaviour
 
     public void RestartGame()
     {
+        Debug.Log("gorestartgame");
+        // Call the UpdateHighscores method when gameOver is true
+        highscoreManager.UpdateHighscores(GameLogicScript.score);
         GameLogicScript.score = 0;
         Time.timeScale = 1f;
         GameLogicScript.isGameOver = false;
@@ -32,6 +40,9 @@ public class GameOverMenu : MonoBehaviour
 
     public void OpenMainMenu()
     {
+        Debug.Log("gomainmenu");
+        // Call the UpdateHighscores method when gameOver is true
+        highscoreManager.UpdateHighscores(GameLogicScript.score);
         SceneManager.LoadSceneAsync(0);
     }
 
@@ -40,7 +51,6 @@ public class GameOverMenu : MonoBehaviour
     {
         ingameScore.SetActive(false);
         gameoverMenu.SetActive(true);
-        Time.timeScale = 0f;
-        
+        Time.timeScale = 0f; 
     }
 }

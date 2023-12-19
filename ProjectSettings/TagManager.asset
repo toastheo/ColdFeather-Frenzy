@@ -15,6 +15,7 @@ TagManager:
   - Sound
   - Chicken
   - SoundController
+  - HighscoreManager
   layers:
   - Default
   - TransparentFX

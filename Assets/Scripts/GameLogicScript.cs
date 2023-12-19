@@ -8,7 +8,6 @@ public class GameLogicScript : MonoBehaviour
 {
     public static bool isGameOver;
     public static int score;
-    public static int highscore;
 
     // private variables
     [SerializeField] private float spawningInterval = 4f;
@@ -20,7 +19,6 @@ public class GameLogicScript : MonoBehaviour
     [SerializeField] public float lifeTimeChicken;
     [SerializeField] public float closeToDying;
     [SerializeField] public float flashAmount;
-
 
 
     // transfer number of Flashes

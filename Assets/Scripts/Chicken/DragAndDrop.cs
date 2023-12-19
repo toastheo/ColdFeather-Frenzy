@@ -17,6 +17,7 @@ public class DragAndDrop : MonoBehaviour
 
     private ChickenBehaviourScript chickenBehaviourScript;
     private GameLogicScript gameLogicScript;
+    
 
     // for chicken noices
     private AudioSource audioSource;
@@ -104,6 +105,7 @@ public class DragAndDrop : MonoBehaviour
                     if (chickenBehaviourScript.ChickenStableMatch())
                     {
                         GameLogicScript.score += 1;
+
                     }
                     // check if chicken matches the stable
                     if (!chickenBehaviourScript.ChickenStableMatch())

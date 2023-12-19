@@ -10,11 +10,14 @@ public class PauseMenu : MonoBehaviour
     public GameObject PausePanel;
     public GameObject OptionsPanel;
     public static bool isPaused;
+    private HighscoreManager highscoreManager;
 
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu.SetActive(false);
+        // get HighscoreManager reference
+        highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager").GetComponent<HighscoreManager>();
     }
 
     // Update is called once per frame
@@ -55,6 +58,9 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Debug.Log("pausemainmenu");
+        // Call the UpdateHighscores method before leaving to menu
+        highscoreManager.UpdateHighscores(GameLogicScript.score);
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         isPaused = false;
