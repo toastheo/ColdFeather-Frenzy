@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject ingameScore;
+    public GameObject PauseButton;
     public GameObject PausePanel;
     public GameObject OptionsPanel;
     public static bool isPaused;
@@ -38,6 +39,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        PauseButton.SetActive(false);
         ingameScore.SetActive(false);
         PausePanel.SetActive(true);
         OptionsPanel.SetActive(false);
@@ -48,6 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ContinueGame()
     {
+        PauseButton.SetActive(true);
         ingameScore.SetActive(true);
         pauseMenu.SetActive(false);
         PausePanel.SetActive(false);

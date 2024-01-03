@@ -7,6 +7,7 @@ public class GameOverMenu : MonoBehaviour
 {
     public GameObject gameoverMenu;
     public GameObject ingameScore;
+    public GameObject PauseButton;
 
     private HighscoreManager highscoreManager;
 
@@ -49,6 +50,7 @@ public class GameOverMenu : MonoBehaviour
 
     public void GameOverDisplay()
     {
+        PauseButton.SetActive(false);
         ingameScore.SetActive(false);
         gameoverMenu.SetActive(true);
         Time.timeScale = 0f; 
