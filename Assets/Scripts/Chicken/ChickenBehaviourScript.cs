@@ -55,7 +55,7 @@ public class ChickenBehaviourScript : MonoBehaviour
         gameLogicScript = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogicScript>();
 
         // get life time of the chickens
-        lifetime = gameLogicScript.lifeTimeChicken;
+        lifetime = gameLogicScript.LifeTimeChicken;
 
         // find target
         target = GameObject.FindWithTag("TargetPoint");
