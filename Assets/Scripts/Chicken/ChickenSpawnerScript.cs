@@ -15,7 +15,7 @@ public class ChickenSpawnerScript : MonoBehaviour
     [SerializeField] private GameObject[] chickens;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         // get spawners
         if (gameObject.transform.childCount != 0)
@@ -33,8 +33,12 @@ public class ChickenSpawnerScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        // if game is over
+        if (GameLogicScript.isGameOver)
+            return;
+        
         // if there aren't any chickens
         if (chickens.Length == 0)
             return;
@@ -45,8 +49,11 @@ public class ChickenSpawnerScript : MonoBehaviour
         // check if timer hits the spawning Interval
         if (time >= gameLogicScript.SpawningInterval)
         {
+            if (gameLogicScript.SpawningInterval == 0)
+                return;
+            
             SpawnChicken();
-            time = 0.0f;            // reset timer
+            time = 0.1f; // reset timer
         }
     }
 

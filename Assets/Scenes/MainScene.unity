@@ -344,8 +344,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0013499856, y: 0.012599975, z: 0}
-    m_Extent: {x: 0.68645, y: 0.6618, z: 0}
+    m_Center: {x: 0.003099978, y: 0.011550009, z: 0}
+    m_Extent: {x: 0.69, y: 0.67315, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5438,8 +5438,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0052999854, y: 0.016450018, z: 0}
-    m_Extent: {x: 0.6969, y: 0.66295004, z: 0}
+    m_Center: {x: 0.007400006, y: 0.010800004, z: 0}
+    m_Extent: {x: 0.6955, y: 0.6734, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11067,11 +11067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3740c942cd35784f99cae9886479d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawningInterval: 3
-  level: 0
-  lifeTimeChicken: 10
-  closeToDying: 0.75
   flashAmount: 3
+  closeToDying: 0.75
 --- !u!4 &901970081
 Transform:
   m_ObjectHideFlags: 0
@@ -11111,9 +11108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa882e0866da4484b91735f4dd427f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  spawningInterval: 3
-  lifeTimeChicken: 10
   levels: []
 --- !u!1 &970687856
 GameObject:

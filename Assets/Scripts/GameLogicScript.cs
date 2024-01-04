@@ -1,31 +1,23 @@
 using System;
 using Level;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameLogicScript : MonoBehaviour
 {
     public static bool isGameOver;
     public static int score;
 
-    // private variables
-    [SerializeField] private float spawningInterval = 4f;
-    public float SpawningInterval => spawningInterval;
-
-    [SerializeField] private int level = 0;
-    public float Level => level;
-
-    [SerializeField] public float lifeTimeChicken;
-    [SerializeField] public float closeToDying;
+    /// <summary>
+    /// Read only the given Property from the LevelDataManager.Instance if its not null
+    /// If its null or can't be accessed, return default value 0.0f or 0
+    /// </summary>
+    public float SpawningInterval => LevelDataManager.Instance?.SpawningInterval ?? default;
+    public float LifeTimeChicken => LevelDataManager.Instance?.LifeTimeChicken ?? default;
+    public int currentLevel => LevelDataManager.Instance?.CurrentLevel ?? default;
+    
     [SerializeField] public float flashAmount;
+    [SerializeField] public float closeToDying;
 
-
-    // transfer number of Flashes
-    public float FlashAmount
-    {
-        get { return flashAmount;  }
-    }
     
     // public methods
     public void GameOver(string customMessage = "No custom message was provided.")
@@ -33,20 +25,15 @@ public class GameLogicScript : MonoBehaviour
         // implement game over animation & screen right here
 
         // PLACEHOLDER
-        Debug.Log($"Game Over: {customMessage}");
+        //Debug.Log($"Game Over: {customMessage}");
         isGameOver = true;
     }
-
+    
+    /*
     private void Update()
     {
-        // update Level and spawning interval
-        if (LevelDataManager.Instance != null)
-        {
-            spawningInterval = LevelDataManager.Instance.spawningInterval;
-            level = LevelDataManager.Instance.level;
-            lifeTimeChicken = LevelDataManager.Instance.lifeTimeChicken;
-            
-            print("Level: " + level + " spawningInterval: " + spawningInterval + "lifeTime: " + lifeTimeChicken);
-        }
+        print("spawning: " + SpawningInterval + 
+              " lifeTime: " + LifeTimeChicken + " level: " +currentLevel);
     }
+    */
 }
