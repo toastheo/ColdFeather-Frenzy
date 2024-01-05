@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using WorldTime;
 
 public class GameOverMenu : MonoBehaviour
 {
@@ -10,15 +7,14 @@ public class GameOverMenu : MonoBehaviour
     public GameObject ingameScore;
 
     private HighscoreManager highscoreManager;
-    private WorldTime.WorldTime worldTime;
-
+    
     private void Start()
     {
         gameoverMenu.SetActive(false);
         highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager")?.GetComponent<HighscoreManager>();
         
-        // Initialize worldTime
-        worldTime = WorldTime.WorldTime.Instance;
+        // Update Game State -> really needed? 
+        GameManager.Instance.ChangeGameState(GameState.StartPlaying);
     }
 
     private void Update()
@@ -34,15 +30,11 @@ public class GameOverMenu : MonoBehaviour
         Debug.Log("gorestartgame");
         highscoreManager?.UpdateHighscores(GameLogicScript.score);
         GameLogicScript.score = 0;
-        Time.timeScale = 1f;
         GameLogicScript.isGameOver = false;
         SceneManager.LoadSceneAsync(1);
-
-        // Restart World Time
-        if (worldTime != null) 
-        {
-            worldTime.StartTime();
-        }
+        
+        // Update Game State
+        GameManager.Instance.ChangeGameState(GameState.StartPlaying);
     }
 
     public void OpenMainMenu()
@@ -51,27 +43,16 @@ public class GameOverMenu : MonoBehaviour
         highscoreManager?.UpdateHighscores(GameLogicScript.score);
         SceneManager.LoadSceneAsync(0);
         
-        // Stop and Reset World Time
-        if (worldTime != null)
-        {
-            worldTime.StopTime();
-            worldTime.ResetTime();
-            //print(worldTime);
-        }
+        // Update Game State
+        GameManager.Instance.ChangeGameState(GameState.Paused);
     }
 
     private void GameOverDisplay()
     {
         ingameScore.SetActive(false);
         gameoverMenu.SetActive(true);
-        Time.timeScale = 0f;
 
-        // Stop and Reset World Time
-        if (worldTime != null)
-        {
-            worldTime.StopTime();
-            worldTime.ResetTime();
-            //print(worldTime);
-        }
+        // Update Game State
+        GameManager.Instance.ChangeGameState(GameState.GameOver);
     }
 }

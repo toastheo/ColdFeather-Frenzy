@@ -49,52 +49,34 @@ public class PauseMenu : MonoBehaviour
         PausePanel.SetActive(true);
         OptionsPanel.SetActive(false);
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
         isPaused = true;
         
-        print(worldTime);
-        // Stop World Time
-        if (worldTime != null)
-        {
-            worldTime.StopTime();
-            print("Pause World Time: " + worldTime);
-        }
+        // Update Game State
+        GameManager.Instance.ChangeGameState(GameState.Paused);
     }
 
     public void ContinueGame()
     {
+        Debug.Log("Continue Game");
         ingameScore.SetActive(true);
         pauseMenu.SetActive(false);
         PausePanel.SetActive(false);
         OptionsPanel.SetActive(true);
-        Time.timeScale = 1f;
         isPaused = false;
         
-        print(worldTime);
-        // Stop and Reset World Time
-        if (worldTime != null)
-        {
-            worldTime.StartTime();
-            print("Continue World Time: " + worldTime);
-        }
+        // Update Game State
+        GameManager.Instance.ChangeGameState(GameState.ContinuePlaying);
     }
 
     public void GoToMainMenu()
     {
-        Debug.Log("pausemainmenu");
+        Debug.Log("Go ");
         // Call the UpdateHighscores method before leaving to menu
         highscoreManager.UpdateHighscores(GameLogicScript.score);
-        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         isPaused = false;
         
-        print(worldTime);
-        // Stop and Reset World Time
-        if (worldTime != null)
-        {
-            worldTime.StopTime();
-            worldTime.ResetTime();
-            print("Go menu World Time: " + worldTime);
-        }
+        // Update Game State
+        GameManager.Instance.ChangeGameState(GameState.MainMenu);
     }
 }

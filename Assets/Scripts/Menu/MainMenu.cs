@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,15 +23,12 @@ public class MainMenu : MonoBehaviour
         yield return new WaitUntil(() => asyncLoad.progress >= 0.9f);
 
         GameLogicScript.score = 0;
-        Time.timeScale = 1f;
         GameLogicScript.isGameOver = false;
 
         asyncLoad.allowSceneActivation = true;
-    }
-
-    public void OpenMainMenu()
-    {
-        SceneManager.LoadSceneAsync(0);
+        
+        // update Playing state
+        GameManager.Instance.ChangeGameState(GameState.StartPlaying);
     }
 
     public void QuitGame()
