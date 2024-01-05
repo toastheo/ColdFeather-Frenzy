@@ -31,6 +31,8 @@ namespace WorldTime
         private void Start()
         {
             currentTime = TimeSpan.FromHours(12); // Start first Day at 12:00
+            
+            StartTime();
         }
 
         public void StopTime()

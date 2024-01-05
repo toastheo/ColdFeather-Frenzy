@@ -16,12 +16,14 @@ namespace WorldTime
 
         private void Awake()
         {
+            Debug.Log("Awake World Light");
             light = GetComponent<Light2D>();
             worldTime.WorldTimeChanged += OnWorldTimeChanged;
         }
 
         private void OnDestroy()
         {
+            Debug.Log("OnDestroy WorldLight");
             worldTime.WorldTimeChanged -= OnWorldTimeChanged;
         }
 
