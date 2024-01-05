@@ -12,9 +12,7 @@ public class GameOverMenu : MonoBehaviour
     {
         gameoverMenu.SetActive(false);
         highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager")?.GetComponent<HighscoreManager>();
-        
-        // Update Game State -> really needed? 
-        GameManager.Instance.ChangeGameState(GameState.StartPlaying);
+
     }
 
     private void Update()
@@ -44,7 +42,7 @@ public class GameOverMenu : MonoBehaviour
         SceneManager.LoadSceneAsync(0);
         
         // Update Game State
-        GameManager.Instance.ChangeGameState(GameState.Paused);
+        GameManager.Instance.ChangeGameState(GameState.MainMenu);
     }
 
     private void GameOverDisplay()

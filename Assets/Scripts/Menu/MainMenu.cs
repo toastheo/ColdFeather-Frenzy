@@ -7,6 +7,9 @@ public class MainMenu : MonoBehaviour
      public void PlayGame()
      {
         StartCoroutine(PlayGameAfterAudio());
+                
+        // update Playing state
+        GameManager.Instance.ChangeGameState(GameState.StartPlaying);
      }
 
     private IEnumerator PlayGameAfterAudio()
@@ -26,9 +29,7 @@ public class MainMenu : MonoBehaviour
         GameLogicScript.isGameOver = false;
 
         asyncLoad.allowSceneActivation = true;
-        
-        // update Playing state
-        GameManager.Instance.ChangeGameState(GameState.StartPlaying);
+
     }
 
     public void QuitGame()

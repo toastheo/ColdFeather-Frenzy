@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
     {
         CurrentGameState = newGameState;
         
-        // Logic what will happen than game will paused etc
         switch (CurrentGameState)
         {
             case GameState.MainMenu:
