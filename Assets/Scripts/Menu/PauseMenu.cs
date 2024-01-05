@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using WorldTime;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,18 +11,24 @@ public class PauseMenu : MonoBehaviour
     public GameObject PausePanel;
     public GameObject OptionsPanel;
     public static bool isPaused;
+    
     private HighscoreManager highscoreManager;
+    private WorldTime.WorldTime worldTime;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         pauseMenu.SetActive(false);
         // get HighscoreManager reference
         highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager").GetComponent<HighscoreManager>();
+        
+        // Initialize worldTime
+        worldTime = WorldTime.WorldTime.Instance;
+
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -36,7 +43,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void PauseGame()
+    private void PauseGame()
     {
         ingameScore.SetActive(false);
         PausePanel.SetActive(true);
@@ -44,6 +51,14 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        
+        print(worldTime);
+        // Stop World Time
+        if (worldTime != null)
+        {
+            worldTime.StopTime();
+            print("Pause World Time: " + worldTime);
+        }
     }
 
     public void ContinueGame()
@@ -54,6 +69,14 @@ public class PauseMenu : MonoBehaviour
         OptionsPanel.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
+        
+        print(worldTime);
+        // Stop and Reset World Time
+        if (worldTime != null)
+        {
+            worldTime.StartTime();
+            print("Continue World Time: " + worldTime);
+        }
     }
 
     public void GoToMainMenu()
@@ -64,5 +87,14 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         isPaused = false;
+        
+        print(worldTime);
+        // Stop and Reset World Time
+        if (worldTime != null)
+        {
+            worldTime.StopTime();
+            worldTime.ResetTime();
+            print("Go menu World Time: " + worldTime);
+        }
     }
 }

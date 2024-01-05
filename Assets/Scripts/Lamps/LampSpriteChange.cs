@@ -1,9 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
 using UnityEngine;
-using WorldTime;
 
 namespace Lamps
 {
@@ -15,19 +11,19 @@ namespace Lamps
         
         private TimeSpan currentTime; 
     
-        void ChangeSprite(bool isDaytime)
+        private void ChangeSprite(bool isDaytime)
         {
             spriteRenderer.sprite = isDaytime ? daySprite : nightSprite;
         }
         
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         }
     
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             currentTime = WorldTime.WorldTime.currentTime; // get current Time from World Time
     

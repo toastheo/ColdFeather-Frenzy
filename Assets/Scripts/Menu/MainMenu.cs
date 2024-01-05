@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
      public void PlayGame()
      {
-        _ = StartCoroutine(PlayGameAfterAudio());
+        StartCoroutine(PlayGameAfterAudio());
      }
 
     private IEnumerator PlayGameAfterAudio()

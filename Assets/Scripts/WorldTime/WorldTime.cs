@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace WorldTime
 {
@@ -14,7 +12,22 @@ namespace WorldTime
         [SerializeField] private float dayLength; // in seconds
         private float inGameMinuteLength => dayLength / WorldTimeConstant.MinutesInDay;
         private Coroutine timeCoroutine;
-        
+
+        public static WorldTime Instance { get; private set; }
+        // create singleton throughout the game -> access globally 
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
         private void Start()
         {
             currentTime = TimeSpan.FromHours(12); // Start first Day at 12:00

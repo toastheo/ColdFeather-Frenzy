@@ -12,14 +12,16 @@ public class GameOverMenu : MonoBehaviour
     private HighscoreManager highscoreManager;
     private WorldTime.WorldTime worldTime;
 
-    void Start()
+    private void Start()
     {
         gameoverMenu.SetActive(false);
         highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager")?.GetComponent<HighscoreManager>();
-        worldTime = FindObjectOfType<WorldTime.WorldTime>();
+        
+        // Initialize worldTime
+        worldTime = WorldTime.WorldTime.Instance;
     }
 
-    void Update()
+    private void Update()
     {
         if(GameLogicScript.isGameOver)
         {
@@ -48,6 +50,14 @@ public class GameOverMenu : MonoBehaviour
         Debug.Log("gomainmenu");
         highscoreManager?.UpdateHighscores(GameLogicScript.score);
         SceneManager.LoadSceneAsync(0);
+        
+        // Stop and Reset World Time
+        if (worldTime != null)
+        {
+            worldTime.StopTime();
+            worldTime.ResetTime();
+            //print(worldTime);
+        }
     }
 
     private void GameOverDisplay()

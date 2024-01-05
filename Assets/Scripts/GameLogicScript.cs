@@ -17,7 +17,6 @@ public class GameLogicScript : MonoBehaviour
     
     [SerializeField] public float flashAmount;
     [SerializeField] public float closeToDying;
-
     
     // public methods
     public void GameOver()
@@ -25,11 +24,13 @@ public class GameLogicScript : MonoBehaviour
         isGameOver = true;
     }
     
-    /*
+    
     private void Update()
     {
         print("spawning: " + SpawningInterval + 
-              " lifeTime: " + LifeTimeChicken + " level: " +currentLevel);
+                " lifeTime: " + LifeTimeChicken + 
+                " level: " + currentLevel + 
+                " Current Time: " + WorldTime.WorldTime.currentTime);
     }
-    */
+    
 }
