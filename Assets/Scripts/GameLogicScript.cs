@@ -20,12 +20,8 @@ public class GameLogicScript : MonoBehaviour
 
     
     // public methods
-    public void GameOver(string customMessage = "No custom message was provided.")
+    public void GameOver()
     {
-        // implement game over animation & screen right here
-
-        // PLACEHOLDER
-        //Debug.Log($"Game Over: {customMessage}");
         isGameOver = true;
     }
     

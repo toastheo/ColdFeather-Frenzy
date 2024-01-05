@@ -4,88 +4,91 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class ChickenSpawnerScript : MonoBehaviour
+namespace Chicken
 {
-    private Transform[] spawners;
-    private float time;
-    private readonly List<GameObject> existingChickens = new();
-
-    [SerializeField] private GameLogicScript gameLogicScript;
-
-    [SerializeField] private GameObject[] chickens;
-
-    // Start is called before the first frame update
-    private void Start()
+    public class ChickenSpawnerScript : MonoBehaviour
     {
-        // get spawners
-        if (gameObject.transform.childCount != 0)
+        private Transform[] spawners;
+        private float time;
+        private readonly List<GameObject> existingChickens = new();
+    
+        [SerializeField] private GameLogicScript gameLogicScript;
+    
+        [SerializeField] private GameObject[] chickens;
+    
+        // Start is called before the first frame update
+        private void Start()
         {
-            spawners = new Transform[gameObject.transform.childCount];
-            for (int i = 0; i < gameObject.transform.childCount; i++)
+            // get spawners
+            if (gameObject.transform.childCount != 0)
             {
-                spawners[i] = gameObject.transform.GetChild(i);
+                spawners = new Transform[gameObject.transform.childCount];
+                for (int i = 0; i < gameObject.transform.childCount; i++)
+                {
+                    spawners[i] = gameObject.transform.GetChild(i);
+                }
+            }
+            else
+            {
+                Debug.LogError("Error: Couldn't found the spawner (Needs atleast 1)!");
             }
         }
-        else
+    
+        // Update is called once per frame
+        private void Update()
         {
-            Debug.LogError("Error: Couldn't found the spawner (Needs atleast 1)!");
-        }
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        // if game is over
-        if (GameLogicScript.isGameOver)
-            return;
-        
-        // if there aren't any chickens
-        if (chickens.Length == 0)
-            return;
-
-        // increase timer
-        time += Time.deltaTime;
-
-        // check if timer hits the spawning Interval
-        if (time >= gameLogicScript.SpawningInterval)
-        {
-            if (gameLogicScript.SpawningInterval == 0)
+            // if game is over
+            if (GameLogicScript.isGameOver)
                 return;
             
-            SpawnChicken();
-            time = 0.1f; // reset timer
+            // if there aren't any chickens
+            if (chickens.Length == 0)
+                return;
+    
+            // increase timer
+            time += Time.deltaTime;
+    
+            // check if timer hits the spawning Interval
+            if (time >= gameLogicScript.SpawningInterval)
+            {
+                if (gameLogicScript.SpawningInterval == 0)
+                    return;
+                
+                SpawnChicken();
+                time = 0.0f; // reset timer
+            }
         }
-    }
-
-    private void SpawnChicken()
-    {
-        if (spawners == null || spawners.Length == 0)
+    
+        private void SpawnChicken()
         {
-            Debug.LogError("Spawners array is null or empty");
-            return;
+            if (spawners == null || spawners.Length == 0)
+            {
+                Debug.LogError("Spawners array is null or empty");
+                return;
+            }
+            
+            // increase sorting order for existing chickens
+            foreach (GameObject chicken in existingChickens)
+            {
+                if (chicken.TryGetComponent<SpriteRenderer>(out var sr))
+                    sr.sortingOrder++;
+            }
+    
+            // get a random chicken
+            int chickenIndex = UnityEngine.Random.Range(0, chickens.Length);
+            
+            // get a random spawner
+            Transform spawnLocation = spawners[UnityEngine.Random.Range(0, spawners.Length)];
+    
+            // spawn chicken
+            GameObject newChicken = Instantiate(chickens[chickenIndex], spawnLocation.position, Quaternion.identity);
+    
+            // set sorting order to the lowest value
+            if (newChicken.TryGetComponent<SpriteRenderer>(out var newSr))
+                newSr.sortingOrder = 0;
+    
+            // add chicken to the list of existing chickens
+            existingChickens.Add(newChicken);
         }
-        
-        // increase sorting order for existing chickens
-        foreach (GameObject chicken in existingChickens)
-        {
-            if (chicken.TryGetComponent<SpriteRenderer>(out var sr))
-                sr.sortingOrder++;
-        }
-
-        // get a random chicken
-        int chickenIndex = UnityEngine.Random.Range(0, chickens.Length);
-        
-        // get a random spawner
-        Transform spawnLocation = spawners[UnityEngine.Random.Range(0, spawners.Length)];
-
-        // spawn chicken
-        GameObject newChicken = Instantiate(chickens[chickenIndex], spawnLocation.position, Quaternion.identity);
-
-        // set sorting order to the lowest value
-        if (newChicken.TryGetComponent<SpriteRenderer>(out var newSr))
-            newSr.sortingOrder = 0;
-
-        // add chicken to the list of existing chickens
-        existingChickens.Add(newChicken);
     }
 }
