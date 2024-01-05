@@ -344,8 +344,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0072000027, y: 0.012899995, z: 0}
-    m_Extent: {x: 0.6912, y: 0.6704, z: 0}
+    m_Center: {x: 0.010749996, y: 0.01394999, z: 0}
+    m_Extent: {x: 0.68705, y: 0.67205, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5438,8 +5438,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0045999885, y: 0.0134500265, z: 0}
-    m_Extent: {x: 0.6901, y: 0.66345, z: 0}
+    m_Center: {x: 0.0063000023, y: 0.013000011, z: 0}
+    m_Extent: {x: 0.6955, y: 0.6703, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5739,7 +5739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c2cc94e6f824b5ca5265e6b1df9b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayLength: 0
+  dayLength: 10
 --- !u!4 &662125793
 Transform:
   m_ObjectHideFlags: 0
@@ -26153,6 +26153,7 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 2052003595}
   - {fileID: 901970081}
+  - {fileID: 816003664}
   - {fileID: 1934593650}
   - {fileID: 1278927314}
   - {fileID: 287434666}
@@ -26166,4 +26167,3 @@ SceneRoots:
   - {fileID: 1727807134}
   - {fileID: 1238120569}
   - {fileID: 337883236}
-  - {fileID: 816003664}

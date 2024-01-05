@@ -7,13 +7,14 @@ public class MainMenu : MonoBehaviour
      public void PlayGame()
      {
         StartCoroutine(PlayGameAfterAudio());
-                
-        // update Playing state
-        GameManager.Instance.ChangeGameState(GameState.StartPlaying);
+        
      }
 
     private IEnumerator PlayGameAfterAudio()
     {
+        // update Playing state
+        GameManager.Instance.ChangeGameState(GameState.StartPlaying);
+        
         AudioSource startSound = GetComponent<AudioSource>();
         startSound.Play();
 
@@ -30,6 +31,7 @@ public class MainMenu : MonoBehaviour
 
         asyncLoad.allowSceneActivation = true;
 
+   
     }
 
     public void QuitGame()
