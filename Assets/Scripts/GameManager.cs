@@ -1,4 +1,5 @@
 using System;
+using Level;
 using UnityEngine;
 
 public enum GameState
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour
             case GameState.StartPlaying:
                 print("Reached StartPlaying");
                 Time.timeScale = 1f;
+                LevelDataManager.Instance.ResetLevelData(1); // resets to level 1
                 WorldTime.WorldTime.Instance.ResetTime();
                 WorldTime.WorldTime.Instance.StartTime();
                 break;

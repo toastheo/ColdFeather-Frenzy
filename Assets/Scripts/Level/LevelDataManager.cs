@@ -76,6 +76,11 @@ namespace Level
             }
         }
 
+        public void ResetLevelData(int restingLevel)
+        {
+            UpdateLevelData(restingLevel);
+        }
+
         [Serializable]
         private class LevelDataWrapper
         {
