@@ -17,15 +17,10 @@ public class GameLogicScript : MonoBehaviour
     
     [SerializeField] public float flashAmount;
     [SerializeField] public float closeToDying;
-
     
     // public methods
-    public void GameOver(string customMessage = "No custom message was provided.")
+    public void GameOver()
     {
-        // implement game over animation & screen right here
-
-        // PLACEHOLDER
-        //Debug.Log($"Game Over: {customMessage}");
         isGameOver = true;
     }
     
@@ -33,7 +28,9 @@ public class GameLogicScript : MonoBehaviour
     private void Update()
     {
         print("spawning: " + SpawningInterval + 
-              " lifeTime: " + LifeTimeChicken + " level: " +currentLevel);
+                " lifeTime: " + LifeTimeChicken + 
+                " level: " + currentLevel + 
+                " Current Time: " + WorldTime.WorldTime.currentTime);
     }
     */
 }

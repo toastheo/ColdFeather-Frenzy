@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -9,33 +7,60 @@ namespace WorldTime
     [RequireComponent(typeof(Light2D))]
     public class WorldLight : MonoBehaviour
     {
-    
         private new Light2D light;
+        [SerializeField] private Gradient lightColorGradient;
 
-        [SerializeField] private WorldTime worldTime;
-        [SerializeField] private Gradient gradient;
-
+        public static WorldLight Instance { get; private set; }
 
         private void Awake()
         {
-            light = GetComponent<Light2D>();
-            worldTime.WorldTimeChanged += OnWorldTimeChanged;
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+                InitializeLight();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        private void Start()
+        {
+            // Subscribe to WorldTime changes
+            WorldTime.Instance.SubscribeToTimeChange(OnWorldTimeChanged);
+            UpdateLightColor(WorldTime.currentTime);
         }
 
         private void OnDestroy()
         {
-            worldTime.WorldTimeChanged -= OnWorldTimeChanged;
+            if (WorldTime.Instance != null)
+            {
+                WorldTime.Instance.UnsubscribeFromTimeChange(OnWorldTimeChanged);
+            }
         }
 
-        private void OnWorldTimeChanged (object sender, TimeSpan newTime)
+        private void InitializeLight()
         {
-            light.color = gradient.Evaluate(PercentOfTheDay(newTime));
+            light = GetComponent<Light2D>();
         }
 
-        private float PercentOfTheDay(TimeSpan timeSpan)
+        private void OnWorldTimeChanged(object sender, TimeSpan newTime)
         {
-            return (float)timeSpan.TotalMinutes % WorldTimeConstant.MinutesInDay / WorldTimeConstant.MinutesInDay;
+            UpdateLightColor(newTime);
         }
+
+        private void UpdateLightColor(TimeSpan currentTime)
+        {
+            light.color = lightColorGradient.Evaluate(CalculateTimePercentage(currentTime));
+        }
+
+        private float CalculateTimePercentage(TimeSpan time)
+        {
+            return (float)time.TotalMinutes % WorldTimeConstant.MinutesInDay / WorldTimeConstant.MinutesInDay;
+        }
+
+
     }
-
 }

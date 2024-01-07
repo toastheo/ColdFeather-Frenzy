@@ -95,6 +95,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets/Scripts/GameLogicScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
+     <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/Chicken/ChickenSortingSystem.cs" />
      <Compile Include="Assets/Scripts/Sounds/SoundControl.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
@@ -112,7 +113,6 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Sprites" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
-     <Folder Include="Assets/Level" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
      <Folder Include="Assets/Farm Assets/animals" />
      <Folder Include="Assets/Scripts/WorldTime" />
@@ -147,6 +147,7 @@
      <Folder Include="Assets/Farm Assets/Chicken Red" />
      <Folder Include="Assets/Farm Assets/Buildings/gifs/market" />
      <Folder Include="Assets/TextMesh Pro" />
+     <None Include="Assets/Resources/levels.json" />
      <Folder Include="Assets/Farm Assets/Snowflakes/32X32" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Resources" />
@@ -195,11 +196,11 @@
      <Folder Include="Assets/Pallets" />
      <Folder Include="Assets/Sounds" />
      <Folder Include="Assets/Farm Assets/enemies/slime black" />
-     <None Include="Assets/Level/levels.json" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Prefabs" />
      <Folder Include="Assets/Materials" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Scenes" />
      <Folder Include="Assets/Farm Assets/enemies/bat" />
+     <Folder Include="Assets/Resources" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/Scripts/Sounds" />
      <Folder Include="Assets/Animations/Red Chicken" />

@@ -32,10 +32,20 @@ namespace Level
 
         private void LoadLevels()
         {
-            string levelPath = Path.Combine(Application.dataPath, "Level/levels.json");
-            string levelString = File.ReadAllText(levelPath);
-            levels = JsonUtility.FromJson<LevelDataWrapper>("{\"levels\":" + levelString + "}").levels;
+            TextAsset jsonFile = Resources.Load<TextAsset>("levels");
+
+            if (jsonFile != null)
+            {
+                string levelString = jsonFile.text;
+                LevelDataWrapper levelsData = JsonUtility.FromJson<LevelDataWrapper>("{\"levels\":" + levelString + "}");
+                levels = levelsData.levels;
+            }
+            else
+            {
+                Debug.LogError("levels.json not found");
+            }
         }
+
 
         private void Start()
         {
@@ -74,6 +84,11 @@ namespace Level
                 CurrentLevel = levels[levels.Length - 1].level;
                 LifeTimeChicken = levels[levels.Length - 1].lifeTimeChicken;
             }
+        }
+
+        public void ResetLevelData(int restingLevel)
+        {
+            UpdateLevelData(restingLevel);
         }
 
         [Serializable]

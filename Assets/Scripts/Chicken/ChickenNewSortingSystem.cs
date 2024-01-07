@@ -3,33 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class ChickenNewSortingSystem : MonoBehaviour
+namespace Chicken
 {
-    // Update is called once per frame
-    void Update()
+    public class ChickenNewSortingSystem : MonoBehaviour
     {
-        // get all sprite renderers
-        SpriteRenderer[] renderers = FindObjectsOfType<SpriteRenderer>();
-
-        // filter by sorting layer "Chicken and Deco"
-        List<SpriteRenderer> decorationRenderers = renderers.Where(r => r.sortingLayerName == "Chicken and Deco").ToList();
-
-        // sort according to their y-position
-        // for player use the bottom center as pivot
-        decorationRenderers = decorationRenderers.OrderByDescending(r => 
+        // Update is called once per frame
+        void Update()
         {
-            float yPos = r.transform.position.y;
-            if (r.gameObject.tag == "Player")
+            // get all sprite renderers
+            SpriteRenderer[] renderers = FindObjectsOfType<SpriteRenderer>();
+    
+            // filter by sorting layer "Chicken and Deco"
+            List<SpriteRenderer> decorationRenderers = renderers.Where(r => r.sortingLayerName == "Chicken and Deco").ToList();
+    
+            // sort according to their y-position
+            // for player use the bottom center as pivot
+            decorationRenderers = decorationRenderers.OrderByDescending(r => 
             {
-                yPos -= r.bounds.extents.y;
+                float yPos = r.transform.position.y;
+                if (r.gameObject.tag == "Player")
+                {
+                    yPos -= r.bounds.extents.y;
+                }
+                return yPos;
+            }).ToList();
+    
+            // assign an order in layer value to each object, starting with 0
+            for (int i = 0; i < decorationRenderers.Count; i++)
+            {
+                decorationRenderers[i].sortingOrder = i;
             }
-            return yPos;
-        }).ToList();
-
-        // assign an order in layer value to each object, starting with 0
-        for (int i = 0; i < decorationRenderers.Count; i++)
-        {
-            decorationRenderers[i].sortingOrder = i;
         }
     }
 }

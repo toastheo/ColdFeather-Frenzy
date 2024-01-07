@@ -10,12 +10,12 @@ namespace Lamps
 
         private TimeSpan currentTime;
     
-        void ToggleLight(bool isDayTime)
+        private void ToggleLight(bool isDayTime)
         {
             light2D.enabled = !isDayTime; 
         }
         
-        void Start()
+        private void Start()
         {
             if(light2D == null)
             {
@@ -23,7 +23,7 @@ namespace Lamps
             }
         }
     
-        void Update()
+        private void Update()
         {
             currentTime = WorldTime.WorldTime.currentTime; // Get current Time from World Time
     

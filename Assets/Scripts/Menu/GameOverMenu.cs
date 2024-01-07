@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using WorldTime;
 
 public class GameOverMenu : MonoBehaviour
 {
@@ -10,16 +7,15 @@ public class GameOverMenu : MonoBehaviour
     public GameObject ingameScore;
 
     private HighscoreManager highscoreManager;
-    private WorldTime.WorldTime worldTime;
-
-    void Start()
+    
+    private void Start()
     {
         gameoverMenu.SetActive(false);
         highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager")?.GetComponent<HighscoreManager>();
-        worldTime = FindObjectOfType<WorldTime.WorldTime>();
+
     }
 
-    void Update()
+    private void Update()
     {
         if(GameLogicScript.isGameOver)
         {
@@ -32,15 +28,11 @@ public class GameOverMenu : MonoBehaviour
         Debug.Log("gorestartgame");
         highscoreManager?.UpdateHighscores(GameLogicScript.score);
         GameLogicScript.score = 0;
-        Time.timeScale = 1f;
         GameLogicScript.isGameOver = false;
         SceneManager.LoadSceneAsync(1);
-
-        // Restart World Time
-        if (worldTime != null) 
-        {
-            worldTime.StartTime();
-        }
+        
+        // Update Game State
+        GameManager.Instance.ChangeGameState(GameState.StartPlaying);
     }
 
     public void OpenMainMenu()
@@ -48,20 +40,17 @@ public class GameOverMenu : MonoBehaviour
         Debug.Log("gomainmenu");
         highscoreManager?.UpdateHighscores(GameLogicScript.score);
         SceneManager.LoadSceneAsync(0);
+        
+        // Update Game State
+        GameManager.Instance.ChangeGameState(GameState.MainMenu);
     }
 
     private void GameOverDisplay()
     {
         ingameScore.SetActive(false);
         gameoverMenu.SetActive(true);
-        Time.timeScale = 0f;
 
-        // Stop and Reset World Time
-        if (worldTime != null)
-        {
-            worldTime.StopTime();
-            worldTime.ResetTime();
-            //print(worldTime);
-        }
+        // Update Game State
+        GameManager.Instance.ChangeGameState(GameState.GameOver);
     }
 }

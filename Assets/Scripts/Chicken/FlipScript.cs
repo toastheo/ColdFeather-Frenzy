@@ -1,60 +1,61 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-public class FlipScript : MonoBehaviour
+namespace Chicken
 {
-    private float previousPositionX;
-    private SpriteRenderer spriteRenderer;
-    private SpriteRenderer childRenderer;
+    public class FlipScript : MonoBehaviour
+    {
+        private float previousPositionX;
+        private SpriteRenderer spriteRenderer;
+        private SpriteRenderer childRenderer;
+        
+        [SerializeField] private ChickenBehaviourScript chickenBehaviourScript;
+        [SerializeField] private bool flipChild = false;
     
-    [SerializeField] private ChickenBehaviourScript chickenBehaviourScript;
-    [SerializeField] private bool flipChild = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // init previous position with start position
-        previousPositionX = transform.position.x;
-
-        // get spriterenderer
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
-        // get childrenderer
-        if (flipChild)
-            childRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // get current position
-        float currentPositionX = transform.position.x;
-
-        // compare current position with previous one
-        if (currentPositionX > previousPositionX )
+        // Start is called before the first frame update
+        void Start()
         {
-            // move to the right and check that sprite isn't flipped
-            if (chickenBehaviourScript == null || chickenBehaviourScript.IsWalking)
-            {
-                spriteRenderer.flipX = false;
-                if (childRenderer != null)
-                    childRenderer.flipX = false;
-            }
+            // init previous position with start position
+            previousPositionX = transform.position.x;
+    
+            // get spriteRenderer
+            spriteRenderer = GetComponent<SpriteRenderer>();
+    
+            // get childRenderer
+            if (flipChild)
+                childRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         }
-        else if (currentPositionX < previousPositionX )
+    
+        // Update is called once per frame
+        void Update()
         {
-            // move to the left and flip sprite
-            if (chickenBehaviourScript == null || chickenBehaviourScript.IsWalking)
+            // get current position
+            float currentPositionX = transform.position.x;
+    
+            // compare current position with previous one
+            if (currentPositionX > previousPositionX )
             {
-                spriteRenderer.flipX = true;
-                if (childRenderer != null)
-                    childRenderer.flipX = true;
+                // move to the right and check that sprite isn't flipped
+                if (chickenBehaviourScript == null || chickenBehaviourScript.IsWalking)
+                {
+                    spriteRenderer.flipX = false;
+                    if (childRenderer != null)
+                        childRenderer.flipX = false;
+                }
             }
+            else if (currentPositionX < previousPositionX )
+            {
+                // move to the left and flip sprite
+                if (chickenBehaviourScript == null || chickenBehaviourScript.IsWalking)
+                {
+                    spriteRenderer.flipX = true;
+                    if (childRenderer != null)
+                        childRenderer.flipX = true;
+                }
+            }
+    
+            // update previous position for the next frame
+            previousPositionX = currentPositionX;
         }
-
-        // update previous position for the next frame
-        previousPositionX = currentPositionX;
     }
 }
+
