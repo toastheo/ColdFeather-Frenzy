@@ -5,7 +5,6 @@ public class GameOverMenu : MonoBehaviour
 {
     public GameObject gameoverMenu;
     public GameObject ingameScore;
-    public GameObject PauseButton;
 
     private HighscoreManager highscoreManager;
     
@@ -48,7 +47,6 @@ public class GameOverMenu : MonoBehaviour
 
     private void GameOverDisplay()
     {
-        PauseButton.SetActive(false);
         ingameScore.SetActive(false);
         gameoverMenu.SetActive(true);
 
