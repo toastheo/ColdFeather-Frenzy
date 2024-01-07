@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject ingameScore;
+    public GameObject PauseButton;
     public GameObject PausePanel;
     public GameObject OptionsPanel;
     public static bool isPaused;
@@ -43,12 +44,14 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    private void PauseGame()
+    public void PauseGame()
     {
+        PauseButton.SetActive(false);
         ingameScore.SetActive(false);
         PausePanel.SetActive(true);
         OptionsPanel.SetActive(false);
         pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
         isPaused = true;
         
         // Update Game State
@@ -57,11 +60,13 @@ public class PauseMenu : MonoBehaviour
 
     public void ContinueGame()
     {
+        PauseButton.SetActive(true);
         Debug.Log("Continue Game");
         ingameScore.SetActive(true);
         pauseMenu.SetActive(false);
         PausePanel.SetActive(false);
         OptionsPanel.SetActive(true);
+        Time.timeScale = 1f;
         isPaused = false;
         
         // Update Game State
@@ -70,9 +75,9 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        Debug.Log("Go ");
         // Call the UpdateHighscores method before leaving to menu
         highscoreManager.UpdateHighscores(GameLogicScript.score);
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         isPaused = false;
         
