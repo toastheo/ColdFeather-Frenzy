@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     
     public GameState CurrentGameState { get; private set; }
 
+    private int levelToReset = 1; // resets to level 1
+
     private void Awake()
     {
         // Singleton
@@ -66,7 +68,7 @@ public class GameManager : MonoBehaviour
             case GameState.StartPlaying:
                 print("Reached StartPlaying");
                 Time.timeScale = 1f;
-                LevelDataManager.Instance.ResetLevelData(1); // resets to level 1
+                LevelDataManager.Instance.ResetLevelData(levelToReset);
                 WorldTime.WorldTime.Instance.ResetTime();
                 WorldTime.WorldTime.Instance.StartTime();
                 break;
