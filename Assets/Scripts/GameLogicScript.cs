@@ -24,7 +24,7 @@ public class GameLogicScript : MonoBehaviour
         isGameOver = true;
     }
     
-    
+    /*
     private void Update()
     {
         print("spawning: " + SpawningInterval + 
@@ -32,5 +32,5 @@ public class GameLogicScript : MonoBehaviour
                 " level: " + currentLevel + 
                 " Current Time: " + WorldTime.WorldTime.currentTime);
     }
-    
+    */
 }

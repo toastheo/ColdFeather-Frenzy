@@ -27,14 +27,7 @@ namespace WorldTime
                 Destroy(gameObject);
             }
         }
-
-        private void Start()
-        {
-            currentTime = TimeSpan.FromHours(12); // Start first Day at 12:00
-            
-            StartTime();
-        }
-
+        
         public void StopTime()
         {
             if (timeCoroutine != null)
@@ -63,9 +56,20 @@ namespace WorldTime
             while (true)
             {
                 currentTime += TimeSpan.FromMinutes(1);
+                //print("current Time: " + currentTime);
                 WorldTimeChanged?.Invoke(this, currentTime);
                 yield return new WaitForSeconds(inGameMinuteLength);
             }
+        }
+        
+        public void SubscribeToTimeChange(EventHandler<TimeSpan> listener)
+        {
+            WorldTimeChanged += listener;
+        }
+
+        public void UnsubscribeFromTimeChange(EventHandler<TimeSpan> listener)
+        {
+            WorldTimeChanged -= listener;
         }
     }
 }
