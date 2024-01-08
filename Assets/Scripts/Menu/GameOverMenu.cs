@@ -119,13 +119,11 @@ public class GameOverMenu : MonoBehaviour
         gameOverMessages.Add("You just got pecked out of the game!");
         gameOverMessages.Add("Looks like you flew the coop too soon!");
         gameOverMessages.Add("The chickens have flown the coop!");
-        gameOverMessages.Add("Egg-sasperating! Try again!");
         gameOverMessages.Add("Not egg-zactly the right move!");
         gameOverMessages.Add("You've been out-clucked!");
         gameOverMessages.Add("Fowl play detected!");
         gameOverMessages.Add("This coop's too wild for you!");
         gameOverMessages.Add("Chickened out, huh?");
-        gameOverMessages.Add("Egg-ceptionally close, but nope!");
         gameOverMessages.Add("Looks like your goose is cooked!");
         gameOverMessages.Add("A poultry attempt, indeed!");
         gameOverMessages.Add("Egg-citing, but not quite right!");
@@ -149,8 +147,33 @@ public class GameOverMenu : MonoBehaviour
         gameOverMessages.Add("Cold feet won't help in this coop!");
         gameOverMessages.Add("Looks like you've hit an ice wall!");
         gameOverMessages.Add("Chickens turned into ice cubes!");
-        gameOverMessages.Add("Egg-cicles aren't the goal!");
         gameOverMessages.Add("Cool concept, but still game over!");
         gameOverMessages.Add("Fowl weather led to your downfall!");
+        gameOverMessages.Add("Game over? You bet your cluck it is!");
+        gameOverMessages.Add("Looks like you just winged it!");
+        gameOverMessages.Add("This isn't your usual peck-nic!");
+        gameOverMessages.Add("Cracked under the pressure, eh?");
+        gameOverMessages.Add("Oops, you plucked up!");
+        gameOverMessages.Add("Game over! Feather your nest and try again!");
+        gameOverMessages.Add("A fowl end to a promising start!");
+        gameOverMessages.Add("You hatched a plan, but it didn't work out!");
+        gameOverMessages.Add("Your coop, your rules, but still... game over!");
+        gameOverMessages.Add("This chicken game's no yolk!");
+        gameOverMessages.Add("\"Bawk bawk!\" Translation: You're out!");
+        gameOverMessages.Add("Egg-actly what you didn't want to happen!");
+        gameOverMessages.Add("In this game of chicks, you're the loser.");
+        gameOverMessages.Add("Whoops! Wrong nest!");
+        gameOverMessages.Add("You've been out-pecked this time.");
+        gameOverMessages.Add("Feathers fly, and so does time");
+        gameOverMessages.Add("Cluck-tastrophe! Better luck next time.");
+        gameOverMessages.Add("This game to hard for you?");
+        gameOverMessages.Add("Brrr... Too cold for chickens. And for you, it seems!");
+        gameOverMessages.Add("Cluck, cluck, game stuck!");
+        gameOverMessages.Add("Looks like your chicken sorting skills are on ice!");
+        gameOverMessages.Add("Fowl play detected. Restart to try again!");
+        gameOverMessages.Add("Chickens in a blizzard, and you're lost in the flurry.");
+        gameOverMessages.Add("Feather-brained strategy won't work here.");
+        gameOverMessages.Add("Even the chickens are shaking their heads.");
+        gameOverMessages.Add("Frostbitten fingers? Slow on the chicken sorting.");
     }
 }
