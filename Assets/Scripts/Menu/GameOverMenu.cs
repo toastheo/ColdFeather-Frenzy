@@ -14,7 +14,6 @@ public class GameOverMenu : MonoBehaviour
     {
         gameoverMenu.SetActive(false);
         highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager")?.GetComponent<HighscoreManager>();
-
     }
 
     private void Update()
@@ -57,11 +56,13 @@ public class GameOverMenu : MonoBehaviour
         ingameScore.SetActive(false);
         gameoverMenu.SetActive(true);
 
-        // stop all chicken sounds
+        // stop all chicken drag and drops
         GameObject[] chickens = GameObject.FindGameObjectsWithTag("Chicken");
         for (int i = 0; i < chickens.Length; i++)
         {
-            chickens[i].GetComponent<DragAndDrop>().audioSource.Stop();
+            DragAndDrop dragAndDropScript = chickens[i].GetComponent<DragAndDrop>();
+            dragAndDropScript.GetComponent<AudioSource>().Stop();
+            dragAndDropScript.enabled = false;
         }
 
         // Update Game State
