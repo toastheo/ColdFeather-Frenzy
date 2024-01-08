@@ -1,3 +1,4 @@
+using Chicken;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +9,7 @@ public class GameOverMenu : MonoBehaviour
     public GameObject PauseButton;
 
     private HighscoreManager highscoreManager;
-    
+
     private void Start()
     {
         gameoverMenu.SetActive(false);
@@ -51,6 +52,13 @@ public class GameOverMenu : MonoBehaviour
         PauseButton.SetActive(false);
         ingameScore.SetActive(false);
         gameoverMenu.SetActive(true);
+
+        // stop all chicken sounds
+        GameObject[] chickens = GameObject.FindGameObjectsWithTag("Chicken");
+        for (int i = 0; i < chickens.Length; i++)
+        {
+            chickens[i].GetComponent<DragAndDrop>().audioSource.Stop();
+        }
 
         // Update Game State
         GameManager.Instance.ChangeGameState(GameState.GameOver);

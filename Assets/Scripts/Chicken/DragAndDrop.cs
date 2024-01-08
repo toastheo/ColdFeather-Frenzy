@@ -19,11 +19,10 @@ namespace Chicken
     
         private ChickenBehaviourScript chickenBehaviourScript;
         private GameLogicScript gameLogicScript;
-        
-    
+            
         // for chicken noices
-        private AudioSource audioSource;
-        private AudioSource blopSound;
+        [HideInInspector] public AudioSource audioSource;
+        [HideInInspector] public AudioSource blopSound;
         [SerializeField] private float noisesFadeOutTime = 2f;
     
         // Start is called before the first frame update

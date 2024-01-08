@@ -71,9 +71,6 @@ public class SoundControl : MonoBehaviour
         // init position of the sliders and sounds
         LoadAudioSettings();
         UpdateAudio();
-
-        flapsoundVolume = soundSlider.maxValue * maxFlapSoundVolume;
-        blopSoundVolume = soundSlider.maxValue * maxBlopSoundVolume;
     }
 
     private void SaveAudioSettings()

@@ -1,3 +1,4 @@
+using Chicken;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,6 @@ public class PauseMenu : MonoBehaviour
     public static bool isPaused;
     
     private HighscoreManager highscoreManager;
-    private WorldTime.WorldTime worldTime;
 
     // Start is called before the first frame update
     private void Start()
@@ -22,9 +22,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         // get HighscoreManager reference
         highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager").GetComponent<HighscoreManager>();
-        
-        // Initialize worldTime
-        worldTime = WorldTime.WorldTime.Instance;
 
     }
 
@@ -53,7 +50,14 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        
+
+        // stop all chicken sounds
+        GameObject[] chickens = GameObject.FindGameObjectsWithTag("Chicken");
+        for (int i = 0; i <  chickens.Length; i++) 
+        {
+            chickens[i].GetComponent<DragAndDrop>().audioSource.Stop();
+        }
+
         // Update Game State
         GameManager.Instance.ChangeGameState(GameState.Paused);
     }
