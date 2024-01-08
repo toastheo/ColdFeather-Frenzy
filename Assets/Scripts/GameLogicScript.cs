@@ -16,9 +16,11 @@ public class GameLogicScript : MonoBehaviour
     public float LifeTimeChicken => LevelDataManager.Instance?.LifeTimeChicken ?? default;
     public int currentLevel => LevelDataManager.Instance?.CurrentLevel ?? default;
     
-    [SerializeField] public float flashAmount;
-    [SerializeField] public float closeToDying;
-    
+    public float flashAmount;
+    public float closeToDying;
+
+    private AudioSource gameOverSound;
+
     // public methods
 
     /*
@@ -40,6 +42,7 @@ public class GameLogicScript : MonoBehaviour
         }
 
         // play game over sound
-        transform.GetChild(0).GetComponent<AudioSource>().Play();
+        gameOverSound = GameObject.FindGameObjectWithTag("GameOver").transform.GetChild(0).GetComponent<AudioSource>();
+        gameOverSound.Play();
     }
 }

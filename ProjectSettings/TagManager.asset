@@ -19,6 +19,7 @@ TagManager:
   - GlobalLight
   - PlayButton
   - Stables
+  - GameOver
   layers:
   - Default
   - TransparentFX
