@@ -32,7 +32,11 @@ public class GameOverMenu : MonoBehaviour
         GameLogicScript.score = 0;
         GameLogicScript.isGameOver = false;
         SceneManager.LoadSceneAsync(1);
-        
+
+        // destroy global light before restarting
+        GameObject globalLight = GameObject.FindGameObjectWithTag("GlobalLight");
+        Destroy(globalLight);
+
         // Update Game State
         GameManager.Instance.ChangeGameState(GameState.StartPlaying);
     }

@@ -16,6 +16,7 @@ TagManager:
   - Chicken
   - SoundController
   - HighscoreManager
+  - GlobalLight
   layers:
   - Default
   - TransparentFX
