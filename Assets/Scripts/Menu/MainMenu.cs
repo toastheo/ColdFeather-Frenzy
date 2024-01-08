@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator PlayGameAfterAudio()
     {
+        // deactivate play button
+        Button playButton = GameObject.FindGameObjectWithTag("PlayButton").GetComponent<Button>();
+        playButton.enabled = false;
+
         // update Playing state
         GameManager.Instance.ChangeGameState(GameState.StartPlaying);
         
