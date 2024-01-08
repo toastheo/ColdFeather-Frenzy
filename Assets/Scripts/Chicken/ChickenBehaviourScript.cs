@@ -208,6 +208,7 @@ namespace Chicken
             if (timer > lifetime)
             {
                 gameLogicScript.GameOver();
+                Destroy(this);
             }
     
             // calculate percentage of the lifetime then shader is triggering
