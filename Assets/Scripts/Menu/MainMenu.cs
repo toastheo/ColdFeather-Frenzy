@@ -12,6 +12,10 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator PlayGameAfterAudio()
     {
+        GameObject globalLight = GameObject.FindGameObjectWithTag("GlobalLight");
+        if (globalLight)
+            Destroy(globalLight);
+
         // deactivate play button
         Button playButton = GameObject.FindGameObjectWithTag("PlayButton").GetComponent<Button>();
         playButton.enabled = false;

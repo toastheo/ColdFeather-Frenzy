@@ -22,7 +22,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         // get HighscoreManager reference
         highscoreManager = GameObject.FindGameObjectWithTag("HighscoreManager").GetComponent<HighscoreManager>();
-
     }
 
     // Update is called once per frame

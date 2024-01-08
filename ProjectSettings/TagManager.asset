@@ -18,6 +18,7 @@ TagManager:
   - HighscoreManager
   - GlobalLight
   - PlayButton
+  - Stables
   layers:
   - Default
   - TransparentFX
