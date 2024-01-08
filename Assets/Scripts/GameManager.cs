@@ -32,9 +32,18 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+
         // Initalize game static
         CurrentGameState = GameState.MainMenu;
+    }
+
+    private void Start()
+    {
+        // in the event that it is started via the main scene
+        Time.timeScale = 1f;
+        LevelDataManager.Instance.ResetLevelData(levelToReset);
+        WorldTime.WorldTime.Instance.ResetTime();
+        WorldTime.WorldTime.Instance.StartTime();
     }
 
     public void ChangeGameState(GameState newGameState)

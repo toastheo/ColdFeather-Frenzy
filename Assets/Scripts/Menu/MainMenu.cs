@@ -7,7 +7,6 @@ public class MainMenu : MonoBehaviour
      public void PlayGame()
      {
         StartCoroutine(PlayGameAfterAudio());
-        
      }
 
     private IEnumerator PlayGameAfterAudio()
@@ -30,8 +29,6 @@ public class MainMenu : MonoBehaviour
         GameLogicScript.isGameOver = false;
 
         asyncLoad.allowSceneActivation = true;
-
-   
     }
 
     public void QuitGame()
