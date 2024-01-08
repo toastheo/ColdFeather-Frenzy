@@ -22,6 +22,17 @@ public class GameLogicScript : MonoBehaviour
     public void GameOver()
     {
         isGameOver = true;
+
+        // stop music
+        GameObject[] musicObjects = GameObject.FindGameObjectsWithTag("Music");
+        
+        for (int i = 0; i <  musicObjects.Length; i++)
+        {
+            musicObjects[i].GetComponent<AudioSource>().Stop();
+        }
+
+        // play game over sound
+        transform.GetChild(0).GetComponent<AudioSource>().Play();
     }
     
     /*

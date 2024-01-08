@@ -112,7 +112,8 @@ public class SoundControl : MonoBehaviour
 
         for (int i = 0; i < soundSources.Length; i++)
         {
-            soundSources[i].volume = soundSlider.value * maxSoundVolume[i];
+            if (soundSources[i])
+                soundSources[i].volume = soundSlider.value * maxSoundVolume[i];
         }
 
         // get all chickens currently on the screen
