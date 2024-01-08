@@ -207,7 +207,7 @@ namespace Chicken
             // check if chicken is dead -> Game Over
             if (timer > lifetime)
             {
-                gameLogicScript.GameOver();
+                gameLogicScript.GameOver("Timeout");
                 Destroy(this);
             }
     

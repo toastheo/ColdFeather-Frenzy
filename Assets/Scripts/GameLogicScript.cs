@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameLogicScript : MonoBehaviour
 {
     public static bool isGameOver;
+    public static string gameOverCause = string.Empty;
     public static int score;
 
     /// <summary>
@@ -19,9 +20,16 @@ public class GameLogicScript : MonoBehaviour
     [SerializeField] public float closeToDying;
     
     // public methods
-    public void GameOver()
+
+    /*
+     * Possible Game Over Causes:
+     * - Timeout
+     * - Sorting
+     */
+    public void GameOver(string cause = "")
     {
         isGameOver = true;
+        gameOverCause = cause;
 
         // stop music
         GameObject[] musicObjects = GameObject.FindGameObjectsWithTag("Music");
@@ -34,14 +42,4 @@ public class GameLogicScript : MonoBehaviour
         // play game over sound
         transform.GetChild(0).GetComponent<AudioSource>().Play();
     }
-    
-    /*
-    private void Update()
-    {
-        print("spawning: " + SpawningInterval + 
-                " lifeTime: " + LifeTimeChicken + 
-                " level: " + currentLevel + 
-                " Current Time: " + WorldTime.WorldTime.currentTime);
-    }
-    */
 }

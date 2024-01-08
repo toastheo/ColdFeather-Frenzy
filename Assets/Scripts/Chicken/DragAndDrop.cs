@@ -110,7 +110,7 @@ namespace Chicken
                         }
                         // check if chicken matches the stable
                         if (!chickenBehaviourScript.ChickenStableMatch())
-                            gameLogicScript.GameOver();
+                            gameLogicScript.GameOver("Sorting");
     
                         // disable script
                         enabled = false;
