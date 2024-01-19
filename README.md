@@ -4,7 +4,7 @@
 
 - A simple mini-game in which the main objective is to sort chickens into the right enclosures while under increasing time pressure
 - Genre: Casual Puzzle Game
-- Platform: Windows, MacOS, WebGL (play on itch.io: https://realtheo.itch.io/coldfeather-frenzy-alpha)
+- Platform: Windows, MacOS, WebGL (play on itch.io: https://toastheo.itch.io/coldfeather-frenzy-alpha)
 
 ## Gameplay
 
