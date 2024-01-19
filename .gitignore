@@ -66,3 +66,6 @@ Desktop.ini
 ColdFeather-Frenzy.sln
 Assembly-CSharp.csproj
 *.csproj
+
+# Cozy Farm Assets
+Assets/Farm Assets/Cozy Farm Assets/*
