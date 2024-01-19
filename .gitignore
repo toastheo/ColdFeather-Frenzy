@@ -69,3 +69,4 @@ Assembly-CSharp.csproj
 
 # Cozy Farm Assets
 Assets/Farm Assets/Cozy Farm Assets/*
+!Assets/Farm Assets/Cozy Farm Assets/*.meta
