@@ -68,5 +68,25 @@ Assembly-CSharp.csproj
 *.csproj
 
 # Cozy Farm Assets
-Assets/Farm Assets/Cozy Farm Assets/*
-!Assets/Farm Assets/Cozy Farm Assets/*.meta
+Assets/Farm Assets/Cozy Farm Assets/animals/*
+!Assets/Farm Assets/Cozy Farm Assets/animals/*.meta
+
+Assets/Farm Assets/Cozy Farm Assets/Buildings/*
+!Assets/Farm Assets/Cozy Farm Assets/Buildings/*.meta
+
+Assets/Farm Assets/Cozy Farm Assets/enemies/*
+!Assets/Farm Assets/Cozy Farm Assets/enemies/*.meta
+
+Assets/Farm Assets/Cozy Farm Assets/farming/*
+!Assets/Farm Assets/Cozy Farm Assets/farming/*.meta
+
+Assets/Farm Assets/Cozy Farm Assets/tiles/*
+!Assets/Farm Assets/Cozy Farm Assets/tiles/*.meta
+
+Assets/Farm Assets/Cozy Farm Assets/ui/*
+!Assets/Farm Assets/Cozy Farm Assets/ui/*.meta
+
+Assets/Farm Assets/Cozy Farm Assets/global.png
+Assets/Farm Assets/Cozy Farm Assets/info.txt
+Assets/Farm Assets/Cozy Farm Assets/item list.txt
+Assets/Farm Assets/Cozy Farm Assets/read me.txt
