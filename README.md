@@ -28,10 +28,10 @@ The Chickenpack asset is subject to the royality-free license and can therefore 
 The download link can be found [here](https://vmiinv.itch.io/chickenpack-asset "Chicken Pack Asset").
 
 The Cozy Farm Asset Pack, on the other hand, prohibits any resale of the assets. For this reason, the asset pack must be purchased independently. Instructions on how to do this can be found in the [Build Instructions](#build-instructions).
-The download link can be found [here](https://shubibubi.itch.io/cozy-farm "Cozy Farm Asset Pack")
+The download link can be found [here](https://shubibubi.itch.io/cozy-farm "Cozy Farm Asset Pack").
 
 ## Build Instructions
-1. **Clone the Repository:** First clone the repository to your local machine using Git. You can use: `git clone https://github.com/toastheo/ColdFeather-Frenzy`
+1. **Clone the Repository:** First clone the repository to your local machine using Git. You can use: `git clone https://github.com/toastheo/ColdFeather-Frenzy`.
 
 2. **Install the Asset Pack:** The Cozy Farm Asset Pack is not included in the project due to its license. First buy the full version of the asset pack on the following website: https://shubibubi.itch.io/cozy-farm.
 Extract the "full_version.zip". Then drag the entire content of the subfolder "full version" into the following path of the Unity project:
